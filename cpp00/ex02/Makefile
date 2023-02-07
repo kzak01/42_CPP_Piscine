@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/06 18:52:47 by kzak              #+#    #+#              #
-#    Updated: 2023/02/07 19:22:57 by kzak             ###   ########.fr        #
+#    Created: 2023/02/07 18:57:22 by kzak              #+#    #+#              #
+#    Updated: 2023/02/07 19:22:51 by kzak             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= phonebook
+NAME	= Account
 CC		= c++
 CFLAGS	= -std=c++98 -Wall -Wextra -Werror
-SRCS	= src/main.cpp src/PhoneBook.cpp src/Contact.cpp
+SRCS	= Account.cpp tests.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 all: $(NAME)

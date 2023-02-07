@@ -6,31 +6,26 @@
 #    By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/06 15:15:04 by kzak              #+#    #+#              #
-#    Updated: 2023/02/06 15:22:19 by kzak             ###   ########.fr        #
+#    Updated: 2023/02/07 19:22:45 by kzak             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= megaphone
-
 CC		= c++
-FLAG	= -std=c++98 -Wall -Wextra -Werror
-
+CFLAG	= -std=c++98 -Wall -Wextra -Werror
 SRC		=	megaphone.cpp
+OBJS	= $(SRCS:.cpp=.o)
 
-OBJS	= $(SRC:.c=.o)
-
-all: $(NAME) $(OBJS)
+all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(FLAGS) $(SRC) -o $(NAME)
-
-%.o: %.c
-		$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
 clean:
-	rm -rf $(NAME)
+	rm -f $(OBJS)
 
 fclean: clean
+	rm -f $(NAME)
 
 re: fclean all
 

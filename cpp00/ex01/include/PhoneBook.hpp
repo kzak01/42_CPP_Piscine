@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 19:41:46 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/06 19:43:44 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/07 11:59:01 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class PhoneBook {
 		~PhoneBook();
 		void addContact(const Contact &c);
 		void displayContacts();
-		Contact searchContact(int index);
+		// Contact searchContact(int index);
 };
 
 #endif

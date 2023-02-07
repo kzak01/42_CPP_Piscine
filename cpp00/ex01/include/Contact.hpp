@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contacts.hpp                                       :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 19:32:45 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/06 19:41:35 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/07 11:09:18 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,18 @@ class Contact {
 	public:
 		Contact();
 		~Contact();
-		void setfirstname(const std::string& firstname);
-		void setlastname(const std::string& lastname);
-		void setnickname(const std::string& nickname);
-		void setphonenumber(const std::string& phonenumber);
-		void setdarkestsecret(const std::string& darkestsecret);
+
+		void setfirstname(std::string firstname);
+		void setlastname(std::string lastname);
+		void setnickname(std::string nickname);
+		void setphonenumber(std::string phonenumber);
+		void setdarkestsecret(std::string darkestsecret);
+
+		std::string getfirstname() const;
+		std::string getlastname() const;
+		std::string getnickname() const;
+		std::string getphonenumber() const;
+		std::string getdarkestsecret() const;
 };
 
 #endif

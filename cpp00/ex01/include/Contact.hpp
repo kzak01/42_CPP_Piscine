@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 19:32:45 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/07 11:09:18 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/07 17:13:24 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,27 @@
 
 class Contact {
 	private:
-		std::string _firstname;
-		std::string _lastname;
-		std::string _nickname;
-		std::string _phonenumber;
-		std::string _darkestsecret;
+		std::string	_firstname;
+		std::string	_lastname;
+		std::string	_nickname;
+		std::string	_phonenumber;
+		std::string	_darkestsecret;
 
 	public:
 		Contact();
 		~Contact();
 
-		void setfirstname(std::string firstname);
-		void setlastname(std::string lastname);
-		void setnickname(std::string nickname);
-		void setphonenumber(std::string phonenumber);
-		void setdarkestsecret(std::string darkestsecret);
+		void	setfirstname(std::string firstname);
+		void	setlastname(std::string lastname);
+		void	setnickname(std::string nickname);
+		void	setphonenumber(std::string phonenumber);
+		void	setdarkestsecret(std::string darkestsecret);
 
-		std::string getfirstname() const;
-		std::string getlastname() const;
-		std::string getnickname() const;
-		std::string getphonenumber() const;
-		std::string getdarkestsecret() const;
+		std::string	getfirstname() const;
+		std::string	getlastname() const;
+		std::string	getnickname() const;
+		std::string	getphonenumber() const;
+		std::string	getdarkestsecret() const;
 };
 
 #endif

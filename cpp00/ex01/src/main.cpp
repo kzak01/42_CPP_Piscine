@@ -6,17 +6,12 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 19:27:56 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/07 11:58:54 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/07 18:42:54 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "../include/PhoneBook.hpp"
-
-void	search_command(PhoneBook *Book)
-{
-	Book->displayContacts();
-}
 
 std::string	get_line()
 {
@@ -27,11 +22,40 @@ std::string	get_line()
 	return (line);
 }
 
+int	is_number(const std::string &s)
+{
+	for (char c : s)
+	{
+		if (!isdigit(c))
+			return (1);
+	}
+	return (0);
+}
+
+void	search_command(PhoneBook *Book)
+{
+	std::string	line;
+
+	Book->displayContacts();
+	std::cout << "Enter Index: ";
+	line = get_line();
+	if (!is_number(line))
+	{
+		int index = stoi(line);
+		if (index < 8 && index >= 0)
+			Book->searchContact(index - 1);
+		else
+			std::cout << "\033[1;31m" << "Index to big/small" << "\033[0m" << std::endl;
+	}
+	else
+		std::cout << "\033[1;31m" << "Input is not a number" << "\033[0m" << std::endl;
+}
+
+
 void	add_command(PhoneBook *Book)
 {
 	Contact		contact;
 	std::string	line;
-	(void)Book;
 
 	std::cout << "Enter First Name: ";
 	line = get_line();
@@ -48,13 +72,6 @@ void	add_command(PhoneBook *Book)
 	std::cout << "Enter Darkest Secret: ";
 	line = get_line();
 	contact.setdarkestsecret(line);
-
-	// std::cout << contact.getfirstname() << std::endl;
-	// std::cout << contact.getlastname() << std::endl;
-	// std::cout << contact.getnickname() << std::endl;
-	// std::cout << contact.getphonenumber() << std::endl;
-	// std::cout << contact.getdarkestsecret() << std::endl;
-
 	Book->addContact(contact);
 }
 
@@ -72,12 +89,15 @@ int main()
 			add_command(&Book);
 		else if (command.compare("SEARCH") == 0)
 		{
-			search_command(&Book);
+			if (Book.get_oldest_index() > 0)
+				search_command(&Book);
+			else
+				std::cout << "\033[1;31m" << "No Contact Yet :'(" << "\033[0m" << std::endl;
 		}
 		else if (command.compare("EXIT") == 0)
 			break;
 		else
-			std::cout << "Wrong command" << std::endl;
+			std::cout << "\033[1;31m" << "Wrong command" << "\033[0m" << std::endl;
 		std::cout << "Enter command (ADD, SEARCH, EXIT): ";
 	}
 	std::cout << "Exit" << std::endl;

@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 21:29:52 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/07 21:34:29 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/08 21:50:02 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,28 @@ int	Account::_nbAccounts = 0;
 int	Account::_totalAmount= 0;
 int	Account::_totalNbDeposits= 0;
 int	Account::_totalNbWithdrawals = 0;
+
+Account::Account(int initial_deposit)
+{
+	_accountIndex = (_nbAccounts += 1) - 1;
+	// _accountIndex = _nbAccounts;
+	// _nbAccounts++;
+	_amount = initial_deposit;
+	_totalAmount += initial_deposit;
+	_nbDeposits = _nbWithdrawals = 0;
+
+	_displayTimestamp();
+	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";created" << std::endl;
+}
+
+Account::~Account()
+{
+	_nbAccounts--;
+	this->_displayTimestamp();
+	std::cout << "index:" << _accountIndex << ";"
+				<< "amount:" << _amount << ";"
+				<< "closed" << std::endl;
+}
 
 int	Account::getNbAccounts()
 {
@@ -39,45 +61,6 @@ int	Account::getNbWithdrawals()
 {
 	return _totalNbWithdrawals;
 }
-
-int	Account::checkAmount() const
-{
-	return _amount;
-}
-
-void	Account::_displayTimestamp()
-{
-	time_t	rawtime;
-	struct	tm * timeinfo;
-	char	buffer[80];
-
-	time(&rawtime);
-	timeinfo = localtime(&rawtime);
-
-	strftime(buffer, 80, "[%Y%m%d_%H%M%S] ", timeinfo);
-	std::cout << buffer << std::flush;
-}
-
-Account::Account(int initial_deposit)
-{
-	_accountIndex = (_nbAccounts += 1) - 1;
-	_amount = initial_deposit;
-	_totalAmount += initial_deposit;
-	_nbDeposits = _nbWithdrawals = 0;
-
-	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";created" << std::endl;
-}
-
-Account::~Account()
-{
-	_nbAccounts--;
-	this->_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";"
-				<< "amount:" << _amount << ";"
-				<< "closed" << std::endl;
-}
-
 
 void	Account::displayAccountsInfos()
 {
@@ -122,6 +105,10 @@ bool	Account::makeWithdrawal(int withdrawal)
 	return true;
 }
 
+int	Account::checkAmount() const
+{
+	return _amount;
+}
 
 void Account::displayStatus() const
 {
@@ -130,4 +117,17 @@ void Account::displayStatus() const
 				<< "amount: " << _amount << "; "
 				<< "deposits: " << _nbDeposits << "; "
 				<< "withdrawals: " << _nbWithdrawals << std::endl;
+}
+
+void	Account::_displayTimestamp()
+{
+	time_t	rawtime;
+	struct	tm * timeinfo;
+	char	buffer[80];
+
+	time(&rawtime);
+	timeinfo = localtime(&rawtime);
+
+	strftime(buffer, 80, "[%Y%m%d_%H%M%S] ", timeinfo);
+	std::cout << buffer << std::flush;
 }

@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 11:48:19 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/09 12:39:15 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/09 22:46:53 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 void	replace_string(std::string &text,const std::string first,const std::string second)
 {
-	int	start_pos = 0;
+	std::string::size_type start_pos = 0;
 
 	while ((start_pos = text.find(first, start_pos)) != std::string::npos)
 	{
@@ -27,11 +27,26 @@ void	replace_string(std::string &text,const std::string first,const std::string 
 	}
 }
 
+std::string	getFilePath(const std::string &fileName)
+{
+	return fileName;
+}
+
 void	open_change_file(Rule *rule)
 {
 	std::string text;
-	std::ifstream input_file(rule->get_file());
-	std::ofstream output_file(rule->get_fileCopy());
+	std::ifstream input_file(getFilePath(rule->get_file()).c_str());
+	if (!input_file.good())
+	{
+		std::cout <<  "\033[1;31m" << "Error: Input file does not exist"  << "\033[0m" << std::endl;
+		return;
+	}
+	std::ofstream output_file(getFilePath(rule->get_fileCopy()).c_str());
+	if (!output_file.good())
+	{
+		std::cout <<  "\033[1;31m" << "Error: Output file error"  << "\033[0m" << std::endl;
+		return;
+	}
 
 	if (input_file.is_open() && output_file.is_open())
 	{

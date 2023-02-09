@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 21:55:33 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/08 21:55:34 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/09 22:50:02 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 int	main()
 {
 	Zombie	*zombie = zombieHorde(4, "Lorenzo");
+	// for (size_t i = 0; i < 4; i++)
+	// {
+	// 	zombie[i].announce();
+	// }
+
 	delete[] zombie;
 	return (0);
 }

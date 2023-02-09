@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 21:56:10 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/08 21:56:11 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/09 22:06:22 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ class Weapon
 		std::string	_type;
 
 	public:
-		Weapon(std::string type);
+		Weapon(const std::string &type);
 		~Weapon();
-		void	setType(std::string type);
+		void	setType(const std::string &newType);
 		const std::string	&getType() const;
 };
 

@@ -6,13 +6,13 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 21:55:58 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/08 21:55:59 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/09 22:10:24 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) : _name(name), _weapon(NULL)
+HumanB::HumanB(const std::string &name) : _name(name), _weapon(nullptr)
 {
 }
 
@@ -20,34 +20,19 @@ HumanB::~HumanB()
 {
 }
 
-void	HumanB::setName(std::string name)
+void	HumanB::setWeapon(Weapon &newWeapon)
 {
-	this->_name = name;
+	this->_weapon = &newWeapon;
 }
 
-void	HumanB::setWeapon(Weapon &weapon)
+void	HumanB::attack() const
 {
-	this->_weapon = &weapon;
-}
-
-std::string HumanB::getName() const
-{
-	return this->_name;
-}
-
-void	HumanB::attack()
-{
-	if (this->_weapon)
+	if (this->_weapon == nullptr)
 	{
-			std::cout << this->_name
-			<< " attack with their "
-			<< this->_weapon->getType()
-			<< "!" << std::endl;
-	}
-	else
-	{
-			std::cout << this->_name
-			<< " attack with their fist!"
+		std::cout << this->_name << " doesn't have a weapon."
 			<< std::endl;
+		return;
 	}
+	std::cout << this->_name << " attack with their "
+		<< this->_weapon->getType() << "!" << std::endl;
 }

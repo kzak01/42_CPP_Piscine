@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 21:55:47 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/08 21:55:48 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/09 21:42:51 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,22 @@ int main()
 	std::string	&strREF = str;
 
   // Print the address of the string variable
-	std::cout << "Indirizzo della variabile stringa: " << &str << std::endl;
+	std::cout << "Address of the string variable: " << &str << std::endl;
 
   // Print the address contained in stringPTR
-	std::cout << "Indirizzo contenuto in stringPTR: " << strPTR << std::endl;
+	std::cout << "Address contained in stringPTR: " << strPTR << std::endl;
 
   // Print the address contained in stringREF
-	std::cout << "Indirizzo contenuto in stringREF: " << &strREF << std::endl;
+	std::cout << "Address contained in stringREF: " << &strREF << std::endl;
 
   // Print the value of the string variable
-	std::cout << "Valore della variabile stringa: " << str << std::endl;
+	std::cout << "Value of the string variable: " << str << std::endl;
 
   // Print the value pointed to by stringPTR
-	std::cout << "Valore puntato da stringPTR: " << *strPTR << std::endl;
+	std::cout << "Value pointed to by stringPTR: " << *strPTR << std::endl;
 
   // Print the value pointed to by stringREF
-	std::cout << "Valore puntato da stringREF: " << strREF << std::endl;
+	std::cout << "Value pointed to by stringREF: " << strREF << std::endl;
 
 	return 0;
 }

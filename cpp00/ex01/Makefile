@@ -6,11 +6,11 @@
 #    By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/06 18:52:47 by kzak              #+#    #+#              #
-#    Updated: 2023/02/07 19:22:57 by kzak             ###   ########.fr        #
+#    Updated: 2023/02/09 10:53:03 by kzak             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= phonebook
+NAME	= Phonebook
 CC		= c++
 CFLAGS	= -std=c++98 -Wall -Wextra -Werror
 SRCS	= src/main.cpp src/PhoneBook.cpp src/Contact.cpp

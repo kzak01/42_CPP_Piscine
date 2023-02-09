@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 19:27:56 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/07 18:42:54 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/09 10:51:18 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ std::string	get_line()
 
 int	is_number(const std::string &s)
 {
-	for (char c : s)
+	for (int i = 0; s[i]; i++)
 	{
-		if (!isdigit(c))
+		if (!isdigit(s[i]))
 			return (1);
 	}
 	return (0);
@@ -41,8 +41,8 @@ void	search_command(PhoneBook *Book)
 	line = get_line();
 	if (!is_number(line))
 	{
-		int index = stoi(line);
-		if (index < 8 && index >= 0)
+		int index = atoi(line.c_str());
+		if (index <= 8 && index >= 1)
 			Book->searchContact(index - 1);
 		else
 			std::cout << "\033[1;31m" << "Index to big/small" << "\033[0m" << std::endl;

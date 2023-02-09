@@ -5,21 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 14:38:10 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/09 16:07:07 by kzak             ###   ########.fr       */
+/*   Created: 2023/02/09 16:12:51 by kzak              #+#    #+#             */
+/*   Updated: 2023/02/09 16:49:26 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int	main()
+int	main(int argc, char **argv)
 {
+	if (argc != 2)
+	{
+		std::cout << "Enter 1 parameter" << std::endl;
+		return (0);
+	}
 	Harl harl;
 
-	harl.complain("debug");
-	harl.complain("info");
-	harl.complain("warning");
-	harl.complain("error");
-	harl.complain("");
+	harl.complain(argv[1]);
 	return (0);
 }

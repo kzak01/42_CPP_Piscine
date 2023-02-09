@@ -5,21 +5,21 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/06 15:15:04 by kzak              #+#    #+#              #
-#    Updated: 2023/02/09 13:49:36 by kzak             ###   ########.fr        #
+#    Created: 2023/02/09 13:43:55 by kzak              #+#    #+#              #
+#    Updated: 2023/02/09 13:44:07 by kzak             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= megaphone
+NAME	= Harl
 CC		= c++
 CFLAG	= -std=c++98 -Wall -Wextra -Werror
-SRCS	= megaphone.cpp
+SRCS	= main.cpp Harl.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+	$(CC) $(CFLAG) -o $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS)
@@ -30,4 +30,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-

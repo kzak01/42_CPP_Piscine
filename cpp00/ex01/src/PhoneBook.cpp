@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 19:44:32 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/07 18:42:44 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/09 14:26:34 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ void PhoneBook::searchContact(int index)
 		std::cout << "Phone number: " << contacts[index].getphonenumber() << std::endl;
 		std::cout << "Darkest secret: " << contacts[index].getdarkestsecret() << std::endl;
 	}
+	else
+		std::cout << "\033[1;31m" << "Pls provide a valid Index" << "\033[0m" << std::endl;
 }
 
 int	PhoneBook::get_oldest_index() const

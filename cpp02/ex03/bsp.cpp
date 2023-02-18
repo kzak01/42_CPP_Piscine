@@ -6,13 +6,13 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 18:33:00 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/17 19:10:45 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/18 15:03:12 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Point.hpp"
 
-static Fixed area2(Point const a, Point const b, Point const c)
+static Fixed area(Point const a, Point const b, Point const c)
 {
 	Fixed x1 = a.getX() - c.getX();
 	Fixed y1 = a.getY() - c.getY();
@@ -41,10 +41,10 @@ the function will be false (i.e. the point is not inside the triangle).
 
 bool bsp(Point const a, Point const b, Point const c, Point const point)
 {
-	Fixed abcArea2 = area2(a, b, c);
-	Fixed pabArea2 = area2(point, a, b);
-	Fixed pbcArea2 = area2(point, b, c);
-	Fixed pcaArea2 = area2(point, c, a);
+	Fixed abcArea2 = area(a, b, c);
+	Fixed pabArea2 = area(point, a, b);
+	Fixed pbcArea2 = area(point, b, c);
+	Fixed pcaArea2 = area(point, c, a);
 
 	return (abcArea2 > 0 && pabArea2 > 0 && pbcArea2 > 0 && pcaArea2 > 0)
 		|| (abcArea2 < 0 && pabArea2 < 0 && pbcArea2 < 0 && pcaArea2 < 0);

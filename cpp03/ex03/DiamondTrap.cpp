@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 18:40:59 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/18 19:14:55 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/28 14:46:59 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,18 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), Frag
 	this->_hp = this->FragTrap::_hp;
 	this->_energy = this->ScavTrap::_energy;
 	this->_attack = this->FragTrap::_attack;
-	std::cout << "\033[34m" <<  "D>> A new DiamondTrap named " << _name << " has been created!" << "\033[0m" << std::endl;
+	std::cout << "\033[34m" << _name << ">> A new DiamondTrap named " << _name << " has been created!" << "\033[0m" << std::endl;
 }
 
 
 DiamondTrap::DiamondTrap(const DiamondTrap& other) {
 	*this = other;
 
-	std::cout << "\033[34m" <<  "D>> DiamondTrap " << this->_name << " copied!" << "\033[0m" << std::endl;
+	std::cout << "\033[34m" << _name << ">> DiamondTrap " << this->_name << " copied!" << "\033[0m" << std::endl;
 }
 
 DiamondTrap::~DiamondTrap() {
-	std::cout << "\033[34m" <<  "D>> The DiamondTrap named " << _name << " has been destroyed!" << "\033[0m" << std::endl;
+	std::cout << "\033[34m" << _name << ">> The DiamondTrap named " << _name << " has been destroyed!" << "\033[0m" << std::endl;
 }
 
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
@@ -49,7 +49,7 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
 		ClapTrap::operator=(other);
 		this->_name = other._name;
 	}
-	std::cout << "\033[34m" <<  "D>> DiamondTrap " << _name << " assigned!" << "\033[0m" << std::endl;
+	std::cout << "\033[34m" << _name << ">> DiamondTrap " << _name << " assigned!" << "\033[0m" << std::endl;
 	return *this;
 }
 

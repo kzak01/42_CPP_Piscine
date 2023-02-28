@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 18:30:43 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/17 18:31:18 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/28 10:19:31 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Point {
 		Point(Point const & src);
 		~Point();
 
-		Point & operator=(Point const & rhs);
+		Point &operator=(Point const & other);
 
 		Fixed const getX() const;
 		Fixed const getY() const;

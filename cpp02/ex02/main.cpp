@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 17:24:12 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/28 09:15:35 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/28 10:09:08 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,58 +37,71 @@ int main(void) {
 
 	std::cout << "a: " << a << std::endl;
 	std::cout << "b: " << b << std::endl;
+	std::cout << "----------------------------------" << std::endl;
 
 	// test operator+
 	c = a + b;
 	std::cout << "a + b = " << c << std::endl;
+	std::cout << "----------------------------------" << std::endl;
 
 	// test operator-
 	c = a - b;
 	std::cout << "a - b = " << c << std::endl;
+	std::cout << "----------------------------------" << std::endl;
 
 	// test operator*
 	c = a * b;
 	std::cout << "a * b = " << c << std::endl;
+	std::cout << "----------------------------------" << std::endl;
 
 	// test operator/
 	c = a / b;
 	std::cout << "a / b = " << c << std::endl;
+	std::cout << "----------------------------------" << std::endl;
 
 	// test operator>   1 if a >, 0 if b >
 	bool gt = (a > b);
 	std::cout << "a > b ? " << gt << std::endl;
+	std::cout << "----------------------------------" << std::endl;
 
 	// test operator>=
 	bool gte = (a >= b);
 	std::cout << "a >= b ? " << gte << std::endl;
+	std::cout << "----------------------------------" << std::endl;
 
 	// test operator<
 	bool lt = (a < b);
 	std::cout << "a < b ? " << lt << std::endl;
+	std::cout << "----------------------------------" << std::endl;
 
 	// test operator<=
 	bool lte = (a <= b);
 	std::cout << "a <= b ? " << lte << std::endl;
+	std::cout << "----------------------------------" << std::endl;
 
 	// test operator==
 	bool eq = (a == b);
 	std::cout << "a == b ? " << eq << std::endl;
+	std::cout << "----------------------------------" << std::endl;
 
 	// test operator!=
 	bool neq = (a != b);
 	std::cout << "a != b ? " << neq << std::endl;
+	std::cout << "----------------------------------" << std::endl;
 
 	// test operator++
 	std::cout << "a pre-increment: " << a << std::endl;
 	std::cout << "a after pre-increment: " << ++a << std::endl;
 	std::cout << "a post-increment: " << a++ << std::endl;
 	std::cout << "a after post-increment: " << a << std::endl;
+	std::cout << "----------------------------------" << std::endl;
 
 	// test operator--
 	std::cout << "b pre-decrement: " << b << std::endl;
 	std::cout << "b after pre-decrement: " << --b << std::endl;
 	std::cout << "b post-decrement: " << b-- << std::endl;
 	std::cout << "b after post-decrement: " << b << std::endl;
+	std::cout << "----------------------------------" << std::endl;
 
 	// test min e max
 	std::cout << "min(a, b): " << Fixed::min(a, b) << std::endl;

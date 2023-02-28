@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 16:29:40 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/17 16:45:39 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/28 09:59:07 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,17 @@ std::cout << "a is " << a << std::endl;
 std::cout << "b is " << b << std::endl;
 std::cout << "c is " << c << std::endl;
 std::cout << "d is " << d << std::endl;
+std::cout << "----------------------------------" << std::endl;
 std::cout << "a is " << a.toInt() << " as integer" << std::endl;
 std::cout << "b is " << b.toInt() << " as integer" << std::endl;
 std::cout << "c is " << c.toInt() << " as integer" << std::endl;
 std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+std::cout << "----------------------------------" << std::endl;
+std::cout << "a is " << a.toFloat() << " as float" << std::endl;
+std::cout << "b is " << b.toFloat() << " as float" << std::endl;
+std::cout << "c is " << c.toFloat() << " as float" << std::endl;
+std::cout << "d is " << d.toFloat() << " as float" << std::endl;
+
+
 return 0;
 }

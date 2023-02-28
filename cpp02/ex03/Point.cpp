@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 18:31:25 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/28 09:19:39 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/28 10:19:34 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ Point::~Point()
 {
 }
 
-Point & Point::operator=(Point const & rhs)
+Point &Point::operator=(Point const & other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
-		const_cast<Fixed&>(_x) = rhs.getX();
-		const_cast<Fixed&>(_y) = rhs.getY();
+		const_cast<Fixed&>(_x) = other.getX();
+		const_cast<Fixed&>(_y) = other.getY();
 	}
 	return *this;
 }

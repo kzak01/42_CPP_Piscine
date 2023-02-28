@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 18:33:00 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/28 09:37:34 by kzak             ###   ########.fr       */
+/*   Updated: 2023/02/28 10:17:35 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,15 @@ static Fixed area(Point const a, Point const b, Point const c) {
 	return x1 * y2 - x2 * y1;
 }
 
-bool bsp(Point const a, Point const b, Point const c, Point const point) {
-	Fixed abcArea2 = area(a, b, c);
-	Fixed pabArea2 = area(point, a, b);
-	Fixed pbcArea2 = area(point, b, c);
-	Fixed pcaArea2 = area(point, c, a);
+bool bsp(Point const a, Point const b, Point const c, Point const point)
+{
+	Fixed abcArea = area(a, b, c);
+	Fixed pabArea = area(point, a, b);
+	Fixed pbcArea = area(point, b, c);
+	Fixed pcaArea = area(point, c, a);
 
-	return (abcArea2 >= 0 && pabArea2 >= 0 && pbcArea2 >= 0 && pcaArea2 >= 0)
-		|| (abcArea2 <= 0 && pabArea2 <= 0 && pbcArea2 <= 0 && pcaArea2 <= 0);
+	return (abcArea > 0 && pabArea > 0 && pbcArea > 0 && pcaArea > 0)
+		|| (abcArea < 0 && pabArea < 0 && pbcArea < 0 && pcaArea < 0);
 }
 
 /*

@@ -6,14 +6,14 @@
 #    By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/31 12:43:13 by kzak              #+#    #+#              #
-#    Updated: 2023/03/31 14:27:44 by kzak             ###   ########.fr        #
+#    Updated: 2023/03/31 19:07:28 by kzak             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= Animal
+NAME	= Brain
 CC		= c++
 CFLAG	= -std=c++98 -Wall -Wextra -Werror
-SRCS	= main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
+SRCS	= main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 all: $(NAME)

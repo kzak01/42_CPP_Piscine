@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 14:15:16 by kzak              #+#    #+#             */
-/*   Updated: 2023/03/31 14:21:02 by kzak             ###   ########.fr       */
+/*   Updated: 2023/03/31 18:54:55 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 class WrongCat : public WrongAnimal {
 	public:
 		WrongCat();
-		WrongCat( std::string type );
 		WrongCat( const WrongCat &other );
 		~WrongCat();
 		WrongCat &operator=( const WrongCat &other );

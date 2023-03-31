@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 13:35:03 by kzak              #+#    #+#             */
-/*   Updated: 2023/03/31 13:43:12 by kzak             ###   ########.fr       */
+/*   Updated: 2023/03/31 18:54:33 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 class Cat : public Animal {
 	public:
 		Cat();
-		Cat( std::string type );
 		Cat( const Cat &other );
 		~Cat();
 		Cat &operator=( const Cat &other );

@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 12:53:49 by kzak              #+#    #+#             */
-/*   Updated: 2023/03/31 14:48:29 by kzak             ###   ########.fr       */
+/*   Updated: 2023/03/31 19:15:13 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,62 +18,29 @@
 
 int main()
 {
-	std::cout << "\033[32m" << "\nCreating Animal Classes\n" << "\033[0m" << std::endl;
-	const Animal* meta = new Animal();
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
 	const Animal* j = new Dog();
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
 	const Animal* i = new Cat();
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
-	const WrongAnimal* wrong_animal = new WrongAnimal();
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
-	const WrongAnimal* wrong_cat = new WrongCat;
+	delete j;//should not create a leak
+	delete i;
 
-	std::cout << "\033[32m" << "\nDisplaing varius type\n" << "\033[0m" << std::endl;
-	std::cout << j->getType() << " " << std::endl;
 	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
-	std::cout << wrong_animal->getType() << " " << std::endl;
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
-	std::cout << wrong_cat->getType() << " " << std::endl;
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
+	Animal *cat_dog[6];
+	for (int i = 0; i < 6; i++) {
+		if (i % 2){
+			cat_dog[i] = new Cat();
+		}
+		else {
+			cat_dog[i] = new Dog();
+		}
+	}
 
-	std::cout << "\033[32m" << "\nMaking sounds\n" << "\033[0m" << std::endl;
-	i->makeSound(); //will output the cat sound!
 	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
-	j->makeSound();
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
-	meta->makeSound();
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
-	wrong_animal->makeSound();
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
-	wrong_cat->makeSound();
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
+	for (int i = 0; i < 6; i++)
+		cat_dog[i]->makeSound();
 
-	std::cout << "\033[32m" << "\nDeleting Animal Classes\n" << "\033[0m" << std::endl;
-	delete(meta);
 	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
-	delete(i);
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
-	delete(j);
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
-	delete(wrong_animal);
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
-	delete(wrong_cat);
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
-	return 0;
+	for (int i = 0; i < 6; i++)
+		delete(cat_dog[i]);
+
+	return(0);
 }
-
-// int main()
-// {
-// 	const Animal* meta = new Animal();
-// 	const Animal* j = new Dog();
-// 	const Animal* i = new Cat();
-// 	std::cout << j->getType() << " " << std::endl;
-// 	std::cout << i->getType() << " " << std::endl;
-// 	i->makeSound(); //will output the cat sound!
-// 	j->makeSound();
-// 	meta->makeSound();
-// 	return 0;
-// }

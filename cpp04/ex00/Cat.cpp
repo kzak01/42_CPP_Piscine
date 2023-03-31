@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 13:39:24 by kzak              #+#    #+#             */
-/*   Updated: 2023/03/31 14:11:33 by kzak             ###   ########.fr       */
+/*   Updated: 2023/03/31 14:44:02 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Cat::Cat() : Animal("Cat") {
 }
 
 Cat::Cat(std::string type) : Animal(type) {
-	std::cout << "\033[1;33m" << type << " type constructor called" << "\033[0m" << std::endl;
+	std::cout << "\033[1;33m" << _type << " type constructor called" << "\033[0m" << std::endl;
 }
 
 Cat::Cat(const Cat &other) {

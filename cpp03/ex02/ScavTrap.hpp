@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 17:25:27 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/18 18:21:44 by kzak             ###   ########.fr       */
+/*   Updated: 2023/03/31 11:39:41 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class ScavTrap : public ClapTrap {
 		~ScavTrap();
 		ScavTrap& operator=( const ScavTrap& other );
 
-		void	attack(const std::string& target) const;
 		void	guardGate();
 
 };

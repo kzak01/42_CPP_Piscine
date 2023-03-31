@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 18:40:59 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/28 14:46:59 by kzak             ###   ########.fr       */
+/*   Updated: 2023/03/31 11:42:36 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,6 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
 	}
 	std::cout << "\033[34m" << _name << ">> DiamondTrap " << _name << " assigned!" << "\033[0m" << std::endl;
 	return *this;
-}
-
-
-void DiamondTrap::attack(const std::string& target) const {
-	this->ScavTrap::attack(target);
 }
 
 void DiamondTrap::whoAmI() const {

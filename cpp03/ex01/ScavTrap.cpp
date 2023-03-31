@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 17:25:25 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/28 14:41:33 by kzak             ###   ########.fr       */
+/*   Updated: 2023/03/31 11:36:03 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,6 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
 	}
 	std::cout << "\033[1;31m" << _name << ">> ScavTrap " << _name << " assigned!" << "\033[0m" << std::endl;
 	return *this;
-}
-
-void ScavTrap::attack(const std::string& target) const
-{
-	if (_energy < 1) {
-		std::cout << "\033[1;31m" << _name << ">> ScavTrap " << _name << " has no energy left to attack!" << "\033[0m" << std::endl;
-		return;
-	}
-	std::cout << "\033[1;31m" << _name << ">> ScavTrap " << _name << " attacks " << target << " for " << _attack << " points of damage!" << "\033[0m" << std::endl;
 }
 
 void ScavTrap::guardGate() {

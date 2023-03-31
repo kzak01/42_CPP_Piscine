@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/18 16:42:47 by kzak              #+#    #+#              #
-#    Updated: 2023/03/31 12:42:58 by kzak             ###   ########.fr        #
+#    Created: 2023/03/31 12:43:13 by kzak              #+#    #+#              #
+#    Updated: 2023/03/31 14:27:44 by kzak             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= DiamondTrap
+NAME	= Animal
 CC		= c++
 CFLAG	= -std=c++98 -Wall -Wextra -Werror
-SRCS	= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
+SRCS	= main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 all: $(NAME)

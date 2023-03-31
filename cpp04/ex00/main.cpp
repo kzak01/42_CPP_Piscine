@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 12:53:49 by kzak              #+#    #+#             */
-/*   Updated: 2023/03/31 14:40:41 by kzak             ###   ########.fr       */
+/*   Updated: 2023/03/31 14:48:29 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,3 +64,16 @@ int main()
 	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
 	return 0;
 }
+
+// int main()
+// {
+// 	const Animal* meta = new Animal();
+// 	const Animal* j = new Dog();
+// 	const Animal* i = new Cat();
+// 	std::cout << j->getType() << " " << std::endl;
+// 	std::cout << i->getType() << " " << std::endl;
+// 	i->makeSound(); //will output the cat sound!
+// 	j->makeSound();
+// 	meta->makeSound();
+// 	return 0;
+// }

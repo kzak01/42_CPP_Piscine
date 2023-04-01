@@ -6,11 +6,11 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 12:53:49 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/01 17:41:20 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/01 17:49:02 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "WrongAnimal.hpp"
@@ -18,10 +18,11 @@
 
 int main()
 {
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	delete j;//should not create a leak
-	delete i;
+	// const Animal* meta = new Animal();
+	// const Animal* j = new Dog();
+	// const Animal* i = new Cat();
+	// delete j;//should not create a leak
+	// delete i;
 
 	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
 	Animal *cat_dog[6];

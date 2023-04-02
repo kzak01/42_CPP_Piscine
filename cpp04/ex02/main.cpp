@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 12:53:49 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/01 17:49:02 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/02 09:37:45 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,15 @@
 
 int main()
 {
-	// const Animal* meta = new Animal();
+	// std::cout << "\033[32m" << "\nSubject main" << "\033[0m" << std::endl;
+	// std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
 	// const Animal* j = new Dog();
 	// const Animal* i = new Cat();
 	// delete j;//should not create a leak
 	// delete i;
 
+	// const Animal *abstract = new Animal();
+	std::cout << "\033[32m" << "\nCreating Animal Classes" << "\033[0m" << std::endl;
 	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
 	Animal *cat_dog[6];
 	for (int i = 0; i < 6; i++) {
@@ -35,18 +38,15 @@ int main()
 		}
 	}
 
+	std::cout << "\033[32m" << "\nMaking sounds" << "\033[0m" << std::endl;
 	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
 	for (int i = 0; i < 6; i++)
 		cat_dog[i]->makeSound();
 
+	std::cout << "\033[32m" << "\nDeleting Animal Classes" << "\033[0m" << std::endl;
 	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
 	for (int i = 0; i < 6; i++)
 		delete(cat_dog[i]);
-
-	// Dog basic;
-	// {
-	// 	Dog tmp = basic;
-	// }
 
 	return(0);
 }

@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 19:49:51 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/01 21:53:46 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/03 10:35:24 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ Ice	&Ice::operator=(const Ice &other) {
 	return *this;
 }
 
-AMateria* Ice::clone() const {
+AMateria	*Ice::clone() const {
 	return (new Ice(*this));
 }
 
-void	Ice::use( ICharacter& target ) {
+void	Ice::use( ICharacter &target ) {
 	std::cout << "\033[96m" << "* shoots an ice bolt at " << target.getName() << " *" << "\033[0m" << std::endl;
 }

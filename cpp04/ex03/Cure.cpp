@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 19:45:33 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/01 22:02:09 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/03 10:35:00 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ AMateria	*Cure::clone() const {
 	return (new Cure(*this));
 }
 
-void	Cure::use( ICharacter& target ) {
+void	Cure::use( ICharacter &target ) {
 	std::cout << "\033[33m" << "* heals " << target.getName() << "'s wounds *" << "\033[0m" << std::endl;
 }

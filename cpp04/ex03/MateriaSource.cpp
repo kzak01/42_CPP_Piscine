@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 21:34:10 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/01 21:37:20 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/03 10:37:02 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ MateriaSource::MateriaSource() {
 }
 
 MateriaSource::MateriaSource(MateriaSource const &other) {
-	*this =other;
+	*this = other;
 }
 
 MateriaSource::~MateriaSource() {
@@ -27,7 +27,7 @@ MateriaSource::~MateriaSource() {
 			delete materias[i];
 }
 
-MateriaSource& MateriaSource::operator=(MateriaSource const &other) {
+MateriaSource	&MateriaSource::operator=(MateriaSource const &other) {
 	if (this != &other) {
 		for (int i = 0; i < 4; i++)
 			materias[i] = other.materias[i];
@@ -35,7 +35,7 @@ MateriaSource& MateriaSource::operator=(MateriaSource const &other) {
 	return *this;
 }
 
-AMateria* MateriaSource::getMateria (std::string const &type) {
+AMateria	*MateriaSource::getMateria (std::string const &type) {
 	for (int i = 0; i < 4; i++)
 		if (materias[i] && materias[i]->getType() == type)
 			return materias[i];

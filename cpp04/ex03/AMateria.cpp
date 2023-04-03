@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 17:55:58 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/01 21:56:53 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/03 10:35:55 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	AMateria::use(ICharacter& other) {
 	// std::cout << "AMateria " << _type << " used on " << other.getName() << std::endl;
 }
 
-AMateria* AMateria::clone() const {
+AMateria	*AMateria::clone() const {
 	return (AMateria*)this;
 }
 

@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 21:32:50 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/01 21:34:02 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/03 10:37:10 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class MateriaSource : public IMateriaSource {
 	private:
-		AMateria*		materias[4];
+		AMateria	*materias[4];
 
 	public:
 		MateriaSource();

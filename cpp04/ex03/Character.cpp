@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 19:39:28 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/01 22:00:08 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/03 10:35:47 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Character::Character(Character const &other) : _name(other._name) {
 	// std::cout << "\033[34m" << "Character: " << this->_name << " copy constructor called" << "\033[0m" << std::endl;
 }
 
-Character& Character::operator=(Character const &other) {
+Character	&Character::operator=(Character const &other) {
 	if (this != &other) {
 		this->_name = other._name;
 		for (int i = 0; i < 4; i++)
@@ -71,6 +71,6 @@ void	Character::use(int idx, ICharacter &target) {
 		// std::cout << "\033[34m" << "Character " << this->_name << " can't use" << "\033[0m" << std::endl;
 }
 
-std::string const& Character::getName() const {
+std::string const	&Character::getName() const {
 	return this->_name;
 }

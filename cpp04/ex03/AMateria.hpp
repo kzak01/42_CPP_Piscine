@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 17:57:39 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/01 22:01:12 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/03 10:36:02 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class AMateria {
 		AMateria			&operator=(AMateria const &other);
 
 		std::string			const & getType() const;
-		virtual AMateria*	clone() const = 0;
+		virtual AMateria	*clone() const = 0;
 		virtual void		use(ICharacter& other);
 };
 

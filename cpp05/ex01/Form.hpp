@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 12:42:15 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/14 15:51:05 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/14 16:54:22 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,6 @@ class Form {
 		};
 };
 
-std::ostream		&operator<<(std::ostream &out, const Form &form);
+std::ostream&		operator<<(std::ostream& out, const Form& form);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 11:32:09 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/14 16:24:14 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/14 16:48:39 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ class Bureaucrat {
 		};
 };
 
-std::ostream &operator<<( std::ostream &out, const Bureaucrat &fixed );
+std::ostream&	operator<<( std::ostream &out, const Bureaucrat &fixed );
 
 #endif

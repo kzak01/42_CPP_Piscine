@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 11:32:11 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/14 16:30:25 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/14 16:51:22 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name) {
 	this->_grade = grade;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &other) :
+Bureaucrat::Bureaucrat(const Bureaucrat& other) :
 						_name(other._name), _grade(other._grade) {
 	// std::cout << "Bureaucrat: " << _name << " copy constructor called" << std::endl;
 }
@@ -34,7 +34,7 @@ Bureaucrat::~Bureaucrat() {
 	// std::cout << "Bureaucrat: " << _name << " desctructor called" << std::endl;
 }
 
-Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &other) {
+Bureaucrat&	Bureaucrat::operator=(const Bureaucrat& other) {
 	// std::cout << "Bureaucrat: " << _name << " copy cnstructor called" << std::endl;
 	if (this != &other) {
 		this->_grade = other.getGrade();
@@ -72,7 +72,7 @@ const char*	Bureaucrat::GradeTooLowException::what() const throw() {
 	return "\033[0;31mGrade is too low\033[0m";
 }
 
-std::ostream& operator<<(std::ostream &out, const Bureaucrat &bureaucra) {
+std::ostream& operator<<(std::ostream& out, const Bureaucrat& bureaucra) {
 	out << bureaucra.getName() << ", bureaucrat grade " << bureaucra.getGrade();
 	return out;
 }

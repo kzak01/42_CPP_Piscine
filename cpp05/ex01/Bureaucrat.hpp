@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 11:32:09 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/14 12:37:50 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/14 14:39:18 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,15 @@ class Bureaucrat {
 		void		decrementGrade();
 
 		class GradeTooHighException : public std::exception {
-			public :
+			public:
 				virtual const char *what() const throw();
 		};
 		class GradeTooLowException : public std::exception {
-			public :
+			public:
 				virtual const char *what() const throw();
 		};
 };
 
-std::ostream &operator<<(std::ostream &out, const Bureaucrat &fixed);
+std::ostream &operator<<(std::ostream &out, const Bureaucrat &bureaucra);
 
 #endif

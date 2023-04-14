@@ -6,13 +6,14 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 11:32:07 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/14 12:36:13 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/14 16:23:26 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
 int	main() {
+	std::cout << "\033[32m" << "\n-----Bureaucrat hight grade-----" << "\033[0m" << std::endl;
 	try {
 		Bureaucrat b1("Valerio", 1);
 		std::cout << b1 << std::endl;
@@ -24,7 +25,7 @@ int	main() {
 	} catch (std::exception &e) {
 		std::cerr << e.what() << std::endl;
 	}
-	std::cout << "\033[32m" << "--------------------------------------" << "\033[0m" << std::endl;
+	std::cout << "\033[32m" << "\n-----Bureaucrat low grade-----" << "\033[0m" << std::endl;
 	try {
 		Bureaucrat b2("Lorenzo", 150);
 		std::cout << b2 << std::endl;

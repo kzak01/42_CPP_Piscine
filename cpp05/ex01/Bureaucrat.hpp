@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 11:32:09 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/14 14:39:18 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/14 15:51:12 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <iostream>
 # include <string>
 # include <stdexcept>
+
+class Form;
 
 class Bureaucrat {
 	private:
@@ -33,6 +35,8 @@ class Bureaucrat {
 		int			getGrade() const;
 		void		incrementGrade();
 		void		decrementGrade();
+
+		void		signForm(Form& form);
 
 		class GradeTooHighException : public std::exception {
 			public:

@@ -6,14 +6,14 @@
 #    By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/02 11:30:57 by kzak              #+#    #+#              #
-#    Updated: 2023/04/02 11:31:34 by kzak             ###   ########.fr        #
+#    Updated: 2023/04/14 16:06:19 by kzak             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= Bureaucrat
+NAME	= Form
 CC		= c++
 CFLAG	= -std=c++98 -Wall -Wextra -Werror
-SRCS	= main.cpp Bureaucrat.cpp
+SRCS	= main.cpp Bureaucrat.cpp Form.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 all: $(NAME)

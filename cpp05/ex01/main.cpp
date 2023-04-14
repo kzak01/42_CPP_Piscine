@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 11:32:07 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/14 16:59:42 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/14 20:04:32 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main() {
 	}
 	std::cout << "\033[32m" << "\n-----Form, bureaucrat grade to low-----" << "\033[0m" << std::endl;
 	try {
-		Bureaucrat b1("Valerio", 1);
+		Bureaucrat b1("Valerio", 51);
 		Form f1("A1", 50, 50);
 		std::cout << b1 << std::endl;
 		std::cout << f1 << std::endl;

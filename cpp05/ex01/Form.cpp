@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 12:42:17 by kzak              #+#    #+#             */
-/*   Updated: 2023/04/14 16:05:35 by kzak             ###   ########.fr       */
+/*   Updated: 2023/04/14 20:04:17 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int			Form::getGradeToExecute() const {
 }
 
 void		Form::beSigned(Bureaucrat& bureaucrat) {
-	if (bureaucrat.getGrade() < this->_gradeToSign)
+	if (bureaucrat.getGrade() > this->_gradeToSign)
 		throw Form::GradeTooLowException();
 	else
 		this->_signed = true;

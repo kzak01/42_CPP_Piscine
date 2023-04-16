@@ -6,14 +6,14 @@
 #    By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/14 20:05:45 by kzak              #+#    #+#              #
-#    Updated: 2023/04/16 15:56:01 by kzak             ###   ########.fr        #
+#    Updated: 2023/04/16 17:01:52 by kzak             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= AForm
+NAME	= Intern
 CC		= c++
 CFLAG	= -std=c++98 -Wall -Wextra -Werror
-SRCS	= main.cpp AForm.cpp Bureaucrat.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+SRCS	= main.cpp AForm.cpp Bureaucrat.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 all: $(NAME)

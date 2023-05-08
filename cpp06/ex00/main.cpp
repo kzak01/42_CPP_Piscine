@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:20:33 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/08 13:15:56 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/08 18:13:45 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main(int argc, char** argv) {
 	if (argc != 2) {
-		std::cout << "\033[1;34mEnter one: char || int || float || double\033[0m" << std::endl;
+		std::cout << "\033[1;34mEnter: ./convert + char || int || float || double\033[0m" << std::endl;
 		return(1);
 	}
 

@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:20:39 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/08 13:04:27 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/09 11:46:10 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,13 @@ class ScalarConverter {
 		// std::string _input;
 
 	public:
-		static void convert(const std::string& input);
-		// ScalarConverter();
-		// ScalarConverter( std::string& input );
-		// ScalarConverter( const ScalarConverter& other );
-		// ~ScalarConverter();
-		// ScalarConverter& operator=( const ScalarConverter& other );
+		ScalarConverter();
+		ScalarConverter( const ScalarConverter& other );
+		virtual ~ScalarConverter() = 0;
+		ScalarConverter& operator=( const ScalarConverter& other );
 
-		// std::string getInput() const;
-		// std::string getChar() const;
-		// int getInt() const;
-		// float getFloat() const;
-		// double getDouble() const;
+		static void convert( const std::string& input );
+
 };
-
-std::ostream&	operator<<(std::ostream& out, const ScalarConverter& bureaucra);
 
 #endif

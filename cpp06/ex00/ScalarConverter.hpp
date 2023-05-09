@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:20:39 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/09 11:46:10 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/09 15:48:53 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@
 # include <cmath>
 
 class ScalarConverter {
-	// private:
-		// std::string _input;
+	private:
+		static void char_converter(const std::string& input);
+		static void number_converter(const std::string& input);
 
 	public:
 		ScalarConverter();
@@ -31,5 +32,6 @@ class ScalarConverter {
 		static void convert( const std::string& input );
 
 };
+
 
 #endif

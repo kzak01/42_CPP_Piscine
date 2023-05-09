@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:20:33 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/09 11:54:44 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/09 15:17:18 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ int main(int argc, char** argv) {
 	}
 
 	std::string input = argv[1];
-	std::cout << "argv[1]: " << input << std::endl;
-
 	ScalarConverter::convert(input);
 
 	return 0;

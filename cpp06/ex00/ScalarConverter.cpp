@@ -6,11 +6,16 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 16:13:09 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/10 09:34:24 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/10 14:41:17 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
+
+std::string special[6] = {
+		"nan", "nanf", "+inf", "-inf", "+inff", "-inff"
+};
+
 
 ScalarConverter::ScalarConverter() {}
 
@@ -57,9 +62,6 @@ void ScalarConverter::number_converter(const std::string& input) {
 		floatValue = static_cast<float>(doubleValue);
 	}
 
-	std::string special[6] = {
-			"nan", "nanf", "+inf", "-inf", "+inff", "-inff"
-	};
 
 	for (int i = 0; i < 6; i++) {
 		if (input == special[i]) {

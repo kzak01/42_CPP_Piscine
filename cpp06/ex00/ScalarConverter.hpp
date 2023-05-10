@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:20:39 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/10 14:24:41 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/10 14:41:03 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <sstream>
 # include <limits>
 # include <cmath>
+
+extern std::string special[6];
 
 class ScalarConverter {
 	private:

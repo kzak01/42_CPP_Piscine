@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:20:39 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/09 15:48:53 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/10 14:24:41 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class ScalarConverter {
 	public:
 		ScalarConverter();
 		ScalarConverter( const ScalarConverter& other );
-		virtual ~ScalarConverter() = 0;
+		~ScalarConverter();
 		ScalarConverter& operator=( const ScalarConverter& other );
 
 		static void convert( const std::string& input );

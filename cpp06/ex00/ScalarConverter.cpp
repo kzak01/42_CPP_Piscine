@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 16:13:09 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/09 16:30:20 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/10 09:34:24 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,13 +67,15 @@ void ScalarConverter::number_converter(const std::string& input) {
 			break;
 		}
 	}
+
 	if (charValue == "" && std::isprint(intValue)) {
 		charValue = "'";
 		charValue += static_cast<char>(intValue);
 		charValue += "'";
 	}
-	else if (charValue == "")
+	else if (charValue == "") {
 		charValue = "Non displayable";
+	}
 
 	std::cout << "char: " << charValue << std::endl;
 	if (charValue == "impossible")

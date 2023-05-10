@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 16:13:09 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/10 15:22:02 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/10 16:22:09 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 std::string special[6] = {
 		"nan", "nanf", "+inf", "-inf", "+inff", "-inff"
 };
-
 
 ScalarConverter::ScalarConverter() {}
 

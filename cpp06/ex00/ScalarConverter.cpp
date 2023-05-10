@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 16:13:09 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/10 16:22:09 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/10 22:17:23 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,32 +84,28 @@ void ScalarConverter::number_converter(const std::string& input) {
 	std::cout << "char: " << charValue << std::endl;
 	if (charValue == "impossible")
 		std::cout << "int: impossible" << std::endl;
-	else if ((floatValue != 0.0f
-			&& floatValue < std::numeric_limits<int>::lowest()
-			&& floatValue > std::numeric_limits<int>::max()) ||
-			(doubleValue != 0.0
-			&& doubleValue > std::numeric_limits<int>::max()
-			&& doubleValue < std::numeric_limits<int>::lowest()))
+	else if (doubleValue < std::numeric_limits<int>::max()
+			&& doubleValue > std::numeric_limits<int>::lowest())
 		std::cout << "int: " << intValue << std::endl;
 	else
-		std::cout << "int: Overflow" << std::endl;
+		std::cout << "int: Non displayable" << std::endl;
 
 	// Check if the number is in the range of float and double
 	if (charValue == "impossible" && floatValue == 0) {
 		std::cout << "float: impossible\ndouble: impossible" << std::endl;
 	} else {
 		if (charValue != "impossible" && floatValue - static_cast<int>(floatValue) == 0) {
-			if (floatValue > std::numeric_limits<float>::max() || floatValue < std::numeric_limits<float>::lowest()) {
-				std::cout << "float: Overflow" << std::endl;
-			} else {
+			// if (floatValue > std::numeric_limits<float>::max() || floatValue < std::numeric_limits<float>::lowest()) {
+			// 	std::cout << "float: Overflow" << std::endl;
+			// } else {
 				std::cout << "float: " << floatValue << ".0f" << std::endl;
-			}
+			// }
 
-			if (doubleValue > std::numeric_limits<double>::max() || doubleValue < std::numeric_limits<double>::lowest()) {
-				std::cout << "double: Overflow" << std::endl;
-			} else {
+			// if (doubleValue > std::numeric_limits<double>::max() || doubleValue < std::numeric_limits<double>::lowest()) {
+			// 	std::cout << "double: Overflow" << std::endl;
+			// } else {
 				std::cout << "double: " << doubleValue << ".0" << std::endl;
-			}
+			// }
 		} else {
 			std::cout << "float: " << floatValue << "f" << std::endl;
 			std::cout << "double: " << doubleValue << std::endl;

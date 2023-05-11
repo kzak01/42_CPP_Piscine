@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:20:33 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/10 22:10:09 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/11 10:18:01 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,16 @@ int main(int argc, char** argv) {
 	int ef = 0;
 	if (input.length() > 1) {
 		for (int i = 0; i < input.length(); i++) {
-			if (input[i] == '.')
+			if (input[i] == '.'){
 				dot++;
-			if (input[i] == 'f')
+			} else if (input[i] == 'f') {
 				ef++;
-			if (!std::isdigit(input[i]) && dot > 1 && ef > 1) {
+			} else if (!std::isdigit(input[i]) || dot > 1 || ef > 1) {
 				std::cout << ERROR << std::endl;
 				return(1);
 			}
 		}
-		if (dot != ef){
+		if (dot > 1 || ef > 1) {
 			std::cout << ERROR << std::endl;
 			return(1);
 		}

@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/11 16:03:44 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/15 15:13:23 by kzak             ###   ########.fr       */
+/*   Created: 2023/05/15 10:01:38 by kzak              #+#    #+#             */
+/*   Updated: 2023/05/15 11:55:39 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-# define WHATEVER_HPP
+#ifndef ITER_HPP
+# define ITER_HPP
 
 # include <iostream>
 
+template < typename T , typename F >
+void iter( T* array, size_t lenght, F function ) {
+	for (size_t i = 0; i < lenght; i++) {
+		if (i != 0) {
+			std::cout << ", ";
+		}
+		function(array[i]);
+	}
+}
+
 template < typename T >
-void	swap( T& x, T& y ) {
-	T swap;
-	swap = x;
-	x = y;
-	y = swap;
-}
-
-template< typename M >
-const M&	max( const M& x, const M& y ) {
-	if (x > y)
-		return x;
-	return y;
-}
-
-template< typename N >
-const N&	min( const N& x, const N& y ) {
-	if (x < y)
-		return x;
-	return y;
+void print_value( T value ) {
+	std::cout << value << std::ends;
 }
 
 #endif

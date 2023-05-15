@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:26:02 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/15 16:19:32 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/15 16:41:30 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ int main() {
 	}
 
 	// Testing out of bounds exception
+	try {
+		std::cout << "arr2[10]: " << arr2[10] << std::endl;
+	} catch (std::exception &e) {
+		std::cerr << e.what() << std::endl;
+	}
+
 	// Testing copy constructor and assignment operator
 	Array<int> arr3 = arr1;
 	Array<int> arr4;
@@ -36,13 +42,8 @@ int main() {
 	// Modifying arr3 and arr4 should not affect each other
 	arr3[0] = 10;
 	std::cout << "arr3[0]: " << arr3[0] << std::endl;
+	std::cout << "qui" << std::endl;
 	std::cout << "arr4[0]: " << arr4[0] << std::endl;
-
-	try {
-		std::cout << "arr2[10]: " << arr2[10] << std::endl;
-	} catch (std::exception &e) {
-		std::cerr << e.what() << std::endl;
-	}
 
 	return 0;
 }

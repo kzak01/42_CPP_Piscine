@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 11:56:40 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/15 16:21:06 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/15 19:26:35 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 template < typename T >
 class Array {
 	private:
-		T* _array;
-		unsigned int _length;
+		T*				_array;
+		unsigned int	_length;
 
 	public:
 		Array();
@@ -39,8 +39,5 @@ class Array {
 		};
 };
 # include "Array.tpp"
-
-// template < typename T >
-// std::ostream&	operator<<(std::ostream& out, const Array<T>& array);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:30:32 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/15 16:14:01 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/15 19:26:51 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define ARRAY_TPP
 
 template<typename T>
-Array<T>::Array() : _array(NULL), _length(0) {}
+Array<T>::Array() : _array(new T()), _length(0) {}
 
 template<typename T>
 Array<T>::Array(unsigned int n) : _array(new T[n]), _length(n) {}

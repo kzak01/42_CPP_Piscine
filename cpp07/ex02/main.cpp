@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:26:02 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/15 19:31:24 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/16 09:02:21 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,13 @@ int main() {
 	arr3[0] = 10;
 	std::cout << "arr3[0]: " << arr3[0] << std::endl;
 	std::cout << "arr4[0]: " << arr4[0] << std::endl;
+
+	// Array<int> arr1(1);
+	// arr1[0] = 10;
+	// Array<int> arr2 = arr1;
+
+	// arr2[0] = 20;
+	// std::cout << "arr1: " << arr1[0] << "\narr2: " << arr2[0] << std::endl;
 
 	return 0;
 }

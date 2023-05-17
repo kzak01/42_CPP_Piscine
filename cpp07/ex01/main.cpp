@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 10:01:40 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/15 12:06:38 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/17 12:19:20 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,17 @@ int main() {
 	size_t doubleArrayLenght = sizeof(doubleArray) / sizeof(doubleArray[0]);
 
 	// Printing int array
-	std::cout << "\033[1;33mInt array : ";
+	std::cout << "\033[1;33mInt array : \n";
 	iter(intArray, intArrayLenght, print_value<int>);
 	std::cout << "\033[0m" << std::endl;
 
 	// Printing char array
-	std::cout << "\033[1;32mChar array : ";
+	std::cout << "\033[1;32mChar array : \n";
 	iter(charArray, charArrayLenght, print_value<char>);
 	std::cout << "\033[0m" << std::endl;
 
 	// Printing double array
-	std::cout << "\033[1;35mDouble array : ";
+	std::cout << "\033[1;35mDouble array : \n";
 	iter(doubleArray, doubleArrayLenght, print_value<double>);
 	std::cout << "\033[0m" << std::endl;
 	return 0;

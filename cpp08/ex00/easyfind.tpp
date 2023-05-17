@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 09:15:59 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/17 12:29:54 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/17 16:12:43 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 # define EASYFIND_TPP
 
 template<typename T>
-bool	easyfind(const T& conteiner, int toFind) {
-	typename T::const_ite
+bool	easyfind(const T& container, int toFind) {
+	typename T::const_iterator it = std::find(container.begin(), container.end(), toFind);
+	return it != container.end();
 }
 
 const char* NoOccurrenceException::what() const throw() {

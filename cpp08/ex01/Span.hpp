@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:09:54 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/18 15:40:21 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/18 22:24:10 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,25 @@
 # include <iostream>
 # include <vector>
 # include <algorithm>
+# include <stdexcept>
 
 class Span {
 	private:
-		std::vector<unsigned int> _n;
+		std::vector<int>	_numbers;
+		unsigned int		_size;
 
 	public:
 		Span();
-		Span( unsigned int n );
+		Span( unsigned int number );
 		Span( const Span& other );
 		Span& operator=( const Span& other );
 		~Span();
 
-		void addNumber(unsigned int n);
-		void addMoreNumber(unsigned int n);
-		unsigned int shortestSpan() const ;
-		unsigned int longestSpan() const ;
+		void addNumber( int number );
+		void addNumbers( std::vector<int>::const_iterator it1, std::vector<int>::const_iterator it2 );
+		int shortestSpan() const ;
+		int longestSpan() const ;
+		void printVector() const;
 };
 
 #endif

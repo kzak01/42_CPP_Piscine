@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 19:27:56 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/17 11:12:55 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/18 12:59:09 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ void	search_command(PhoneBook *Book)
 	else
 		std::cout << "\033[1;31m" << "Input is not a number" << "\033[0m" << std::endl;
 }
-
 
 void	add_command(PhoneBook *Book)
 {

@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/16 09:16:01 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/18 16:05:45 by kzak             ###   ########.fr       */
+/*   Created: 2023/05/18 15:09:54 by kzak              #+#    #+#             */
+/*   Updated: 2023/05/18 15:40:21 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EASYFIND_HPP
-# define EASYFIND_HPP
+#ifndef SPAN_HPP
+# define SPAN_HPP
 
 # include <iostream>
-# include <algorithm>
-# include <map>
 # include <vector>
-# include <list>
+# include <algorithm>
 
-template< typename T >
-bool	easyfind(const T& container, int toFind);
+class Span {
+	private:
+		std::vector<unsigned int> _n;
 
-class	NoOccurrenceException : public std::exception {
 	public:
-		virtual const char* what() const throw();
-};
+		Span();
+		Span( unsigned int n );
+		Span( const Span& other );
+		Span& operator=( const Span& other );
+		~Span();
 
-class	FoundException : public std::exception {
-	public:
-		virtual const char* what() const throw();
+		void addNumber(unsigned int n);
+		void addMoreNumber(unsigned int n);
+		unsigned int shortestSpan() const ;
+		unsigned int longestSpan() const ;
 };
-
-# include "easyfind.tpp"
 
 #endif

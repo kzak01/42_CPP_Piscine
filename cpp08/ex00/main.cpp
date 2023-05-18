@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 09:15:55 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/17 16:17:24 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/18 16:09:25 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int main() {
 			throw FoundException();
 		else
 			throw NoOccurrenceException();
-		
 	} catch (std::exception& e) {
 		std::cerr << e.what() << std::endl;
 	}

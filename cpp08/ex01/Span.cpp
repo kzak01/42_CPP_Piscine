@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/11 16:03:44 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/18 11:27:12 by kzak             ###   ########.fr       */
+/*   Created: 2023/05/18 15:12:41 by kzak              #+#    #+#             */
+/*   Updated: 2023/05/18 15:22:26 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-# define WHATEVER_HPP
+#include "Span.hpp"
 
-# include <iostream>
+Span::Span() : _n(new unsigned int()) {}
 
-template < typename T >
-void	swap( T& x, T& y ) {
-	T swap;
-	swap = x;
-	x = y;
-	y = swap;
+Span::Span(unsigned int n) : _n(new unsigned int(n)) {}
+
+Span::Span(const Span& other) : _n{}
+
+Span& Span::operator=(const Span& other) {
+	return *this;
 }
 
-template< typename M >
-const M&	max( const M& x, const M& y ) {
-	if (x > y)
-		return x;
-	return y;
-}
+Span::~Span() {}
 
-template< typename N >
-const N&	min( const N& x, const N& y ) {
-	if (x < y)
-		return x;
-	return y;
+void	Span::addNumber(unsigned int n) {
+	
 }
-
-#endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 19:41:46 by kzak              #+#    #+#             */
-/*   Updated: 2023/02/07 17:13:02 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/18 11:45:08 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class PhoneBook {
 	private:
 		Contact	contacts[8];
 		int		oldest_index;
-	
+
 	public:
 		PhoneBook();
 		~PhoneBook();

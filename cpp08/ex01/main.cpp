@@ -1,40 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/11 16:03:44 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/18 11:27:12 by kzak             ###   ########.fr       */
+/*   Created: 2023/05/18 16:10:44 by kzak              #+#    #+#             */
+/*   Updated: 2023/05/18 16:11:06 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-# define WHATEVER_HPP
+#include "Span.hpp"
 
-# include <iostream>
-
-template < typename T >
-void	swap( T& x, T& y ) {
-	T swap;
-	swap = x;
-	x = y;
-	y = swap;
+int main() {
+	
+	return 0;
 }
-
-template< typename M >
-const M&	max( const M& x, const M& y ) {
-	if (x > y)
-		return x;
-	return y;
-}
-
-template< typename N >
-const N&	min( const N& x, const N& y ) {
-	if (x < y)
-		return x;
-	return y;
-}
-
-#endif

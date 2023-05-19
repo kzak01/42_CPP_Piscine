@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 21:41:13 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/18 22:21:39 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/19 15:00:09 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int main() {
 		Span test(vec.size());
 
 		test.addNumbers(vec.begin(), vec.end());
-		test.printVector();
+		// test.printVector();
 		std::cout << "Shortest span: " << test.shortestSpan() << std::endl;
 		std::cout << "Longest span: " << test.longestSpan() << std::endl;
 		test.addNumber(42);

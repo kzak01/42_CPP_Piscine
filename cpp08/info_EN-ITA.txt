@@ -1,0 +1,198 @@
+--------------------ENGLISH--------------------------------------------------------------------
+STL:
+
+Containers: Provides a variety of container classes such as vector, list, deque, set,
+map, and many others. These containers offer different data structures for storing
+and managing collections of objects.
+
+Algorithms: The STL includes a wide range of predefined algorithms that operate on
+data sequences. These algorithms can be used to perform operations such as sorting,
+searching, manipulation, comparison, and more on containers or sequences of elements.
+
+Functions: The STL provides a set of functions and function objects that can be used
+as arguments to algorithms. For example, you can specify a custom comparison function
+for sorting elements in a container.
+
+Iterators: Iterators are objects used to access and iterate over the elements of a
+sequence or container. The STL provides iterators that allow working with containers
+in a generic way, enabling sequential access to the elements.
+
+-----------------------------------------------------------------------------------------------
+Containers:
+
+Array: A container that represents a fixed-size sequence of elements,
+where each element can be directly accessed using an index.
+
+Vector: A container that represents a variable-size sequence of elements,
+where the elements are stored in a contiguous block of memory.
+It provides random access to elements and efficient insertion and removal of
+elements from the end.
+
+List: A container that represents a sequence of elements linked together by pointers,
+forming a doubly-linked list. It offers sequential access to the elements
+and efficient insertion and removal of elements at any position.
+
+Deque: A container that represents a variable-size sequence of elements,
+similar to a vector but also allows efficient insertion and removal at both
+the beginning and the end of the sequence.
+
+Set: A container that represents a collection of unique elements, ordered based
+on the specified sorting criterion. It does not allow duplicate elements.
+
+Map: A container that represents a collection of key-value pairs, where the keys
+are unique and ordered, allowing fast retrieval of values associated with a specific key.
+
+-----------------------------------------------------------------------------------
+Algorithms:
+
+Modification algorithms: These algorithms modify the data contained in a sequence.
+For example, you can find algorithms to reverse the order of elements (reverse),
+randomly shuffle the elements (shuffle), or fill a sequence with specific values (fill).
+
+Search and comparison algorithms: These algorithms allow performing search and
+comparison operations within sequences. For example, you can find algorithms
+to search for a specific element (find), check if a sequence is sorted (is_sorted),
+or compare two sequences (equal).
+
+Sorting algorithms: These algorithms allow sorting the data within sequences.
+Various sorting algorithms are available, such as sort, stable_sort,
+and partial_sort, which use different sorting strategies like quicksort or mergesort.
+
+Aggregation algorithms: These algorithms allow performing aggregation
+operations on sequence data. For example, you can find algorithms to calculate
+the total sum of elements (accumulate), count the elements that satisfy a
+specific condition (count_if), or find the maximum or minimum value (max_element, min_element).
+
+Iteration algorithms: These algorithms allow performing iteration operations
+on sequence data. For example, you can find algorithms to apply a function
+to each element of the sequence (for_each), copy data from one sequence
+to another (copy), or remove duplicate elements from the sequence (unique).
+
+Here are some of the most common algorithms in the <algorithm> library:
+
+find: Finds the first occurrence of an element within a sequence.
+
+sort: Sorts the elements of a sequence in ascending order or according
+to a specific criterion.
+
+reverse: Reverses the order of elements in a sequence.
+
+copy: Copies elements from one sequence to another.
+
+transform: Applies a function or operation to each element of a sequence,
+generating a new sequence.
+
+accumulate: Calculates the total sum or result of an aggregation operation
+on a sequence of elements.
+
+count: Counts the number of occurrences of an element within a sequence.
+
+remove: Removes elements matching a specific value from the sequence.
+
+unique: Removes consecutive duplicate elements from the sequence.
+
+binary_search: Checks if an element is present in a sorted sequence.
+
+
+
+
+
+--------------------ITALIANO-------------------------------------------------------------------
+STL:
+
+Contenitori: Fornisce una varietà di classi di contenitori come vector, list, deque,
+set, map e molti altri. Questi contenitori offrono diverse strutture dati per
+l'archiviazione e la gestione di collezioni di oggetti.
+
+Algoritmi: La STL include una vasta gamma di algoritmi predefiniti che operano su
+sequenze di dati. Questi algoritmi possono essere utilizzati per eseguire operazioni
+come ordinamento, ricerca, manipolazione, confronto e altro ancora su contenitori o
+sequenze di elementi.
+
+Funzioni: La STL offre un insieme di funzioni e oggetti funzione che possono essere
+utilizzati come argomenti per gli algoritmi. Ad esempio, è possibile specificare una
+funzione di confronto personalizzata per l'ordinamento di elementi in un contenitore.
+
+Iteratori: Gli iteratori sono oggetti utilizzati per accedere e iterare sugli
+elementi di una sequenza o di un contenitore. La STL fornisce iteratori che consentono
+di lavorare con i contenitori in modo generico, permettendo l'accesso sequenziale agli elementi.
+
+---------------------------------------------------------------------------------------------------
+CONTAINER:
+
+Array: Un contenitore che rappresenta una sequenza di elementi di dimensione fissa,
+in cui ciascun elemento può essere accessibile direttamente tramite un indice.
+
+Vector: Un contenitore che rappresenta una sequenza di elementi di dimensione
+variabile, in cui gli elementi sono archiviati in un blocco di memoria contiguo.
+Fornisce l'accesso casuale agli elementi e la possibilità di inserire e rimuovere
+elementi dalla fine in modo efficiente.
+
+List: Un contenitore che rappresenta una sequenza di elementi collegati tra loro
+mediante puntatori, formando una lista doppiamente collegata. Offre l'accesso
+sequenziale agli elementi e la possibilità di inserire e rimuovere elementi in
+qualsiasi posizione in modo efficiente.
+
+Deque: Un contenitore che rappresenta una sequenza di elementi di dimensione variabile,
+simile a un vector, ma permette anche l'inserimento e la rimozione efficiente sia
+all'inizio che alla fine della sequenza.
+
+Set: Un contenitore che rappresenta un insieme di elementi unici, ordinati in base
+al criterio di ordinamento specificato. Non consente elementi duplicati.
+
+Map: Un contenitore che rappresenta una collezione di coppie chiave-valore, in cui
+le chiavi sono univoche e ordinate, consentendo il recupero rapido dei valori
+associati a una determinata chiave.
+
+----------------------------------------------------------------------------------------------
+ALGORITHM:
+
+Algoritmi di modifica: Questi algoritmi modificano i dati contenuti in una sequenza.
+Ad esempio, si possono trovare algoritmi per invertire l'ordine degli elementi (reverse),
+per mescolare casualmente gli elementi (shuffle) o per riempire una sequenza con valori
+specifici (fill).
+
+Algoritmi di ricerca e confronto: Questi algoritmi consentono di eseguire operazioni
+di ricerca e confronto all'interno delle sequenze. Ad esempio, si possono trovare
+algoritmi per cercare un elemento specifico (find), per verificare se una sequenza
+è ordinata (is_sorted), o per confrontare due sequenze (equal).
+
+Algoritmi di ordinamento: Questi algoritmi permettono di ordinare i dati all'interno
+delle sequenze. Sono disponibili diversi algoritmi di ordinamento come sort, stable_sort,
+partial_sort, che utilizzano differenti strategie di ordinamento come il quicksort o il mergesort.
+
+Algoritmi di aggregazione: Questi algoritmi consentono di eseguire operazioni di
+aggregazione sui dati delle sequenze. Ad esempio, si possono trovare algoritmi
+per calcolare la somma totale degli elementi (accumulate), il conteggio degli
+elementi che soddisfano una determinata condizione (count_if), o la ricerca
+del valore massimo o minimo (max_element, min_element).
+
+Algoritmi di iterazione: Questi algoritmi consentono di eseguire operazioni
+di iterazione sui dati delle sequenze. Ad esempio, si possono trovare algoritmi
+per eseguire una funzione su ogni elemento della sequenza (for_each),
+per copiare i dati da una sequenza a un'altra (copy), o per rimuovere gli
+elementi duplicati dalla sequenza (unique).
+
+Ecco alcuni degli algoritmi più comuni presenti nella libreria <algorithm>:
+
+find: Cerca la prima occorrenza di un elemento all'interno di una sequenza.
+
+sort: Ordina gli elementi di una sequenza in ordine crescente o secondo un criterio specifico.
+
+reverse: Inverte l'ordine degli elementi di una sequenza.
+
+copy: Copia gli elementi da una sequenza a un'altra.
+
+transform: Applica una funzione o un'operazione a ciascun elemento di una sequenza,
+generando una nuova sequenza.
+
+accumulate: Calcola la somma totale o il risultato di un'operazione di aggregazione
+su una sequenza di elementi.
+
+count: Conta il numero di occorrenze di un elemento all'interno di una sequenza.
+
+remove: Rimuove gli elementi corrispondenti a un valore specifico dalla sequenza.
+
+unique: Rimuove gli elementi duplicati consecutivi dalla sequenza.
+
+binary_search: Verifica se un elemento è presente in una sequenza ordinata.

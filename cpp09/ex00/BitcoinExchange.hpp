@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 09:27:01 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/22 11:22:58 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/22 16:03:47 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@
 # include <map>
 # include <fstream>
 # include <algorithm>
+# include <sstream>
+
+#include <string_view>
+#include <stdexcept>
 
 class Bitcoin {
 	private:
@@ -25,12 +29,11 @@ class Bitcoin {
 
 	public:
 		Bitcoin();
-		Bitcoin( std::ifstream data );
 		Bitcoin( const Bitcoin& other );
 		Bitcoin& operator=( const Bitcoin& other );
 		~Bitcoin();
 
-		void bitExchange( std::ifstream input );
+		int bitExchange( char* argv );
 };
 
 #endif

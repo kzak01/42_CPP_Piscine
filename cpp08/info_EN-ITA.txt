@@ -1,5 +1,5 @@
 --------------------ENGLISH--------------------------------------------------------------------
-STL:
+STL (Standard Template Library):
 
 Containers: Provides a variety of container classes such as vector, list, deque, set,
 map, and many others. These containers offer different data structures for storing

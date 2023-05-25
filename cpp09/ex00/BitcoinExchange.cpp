@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 09:26:59 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/24 13:08:51 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/25 12:52:52 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,15 @@
 Bitcoin::Bitcoin() {
 	std::ifstream data("data.csv");
 	std::string line = "";
+	std::getline(data, line);
 
 	while (std::getline(data, line)) {
-		if (line != "date,exchange_rate") {
-			float number = 0.0;
-			size_t commaIndex = line.find(',');
-			std::string numberStr = line.substr(commaIndex + 1);
-			std::istringstream iss(numberStr);
-			iss >> number;
-			_data[line.substr(0, commaIndex)] = number;
-		}
+		float number = 0.0;
+		size_t commaIndex = line.find(',');
+		std::string valueStr = line.substr(commaIndex + 1);
+		std::istringstream iss(valueStr);
+		iss >> number;
+		_data[line.substr(0, commaIndex)] = number;
 	}
 	data.close();
 }
@@ -92,33 +91,35 @@ bool	check_value(std::string value) {
 	return true;
 }
 
-bool check_error(std::string line) {
+void Bitcoin::check_convert(std::string line) {
 	if (!check_data(line)) {
 		std::cout << "Error: bad input => " << line << std::endl;
-		return false;
+		return;
 	}
 
-	float number = 0.0;
 	std::string dataLine = line.substr(0, 10);
-	std::string numberStr = line.substr(13, line.size() - 13);
+	std::string valueStr = line.substr(13, line.size() - 13);
 
 	if (!check_time(dataLine)) {
 		std::cout << "Error: bad input => " << line << std::endl;
-		return false;
+		return;
 	}
-	if (!check_value(numberStr)) {
-		std::cout << "Error: not a positive number" << line << std::endl;
-		return false;
+	if (!check_value(valueStr)) {
+		std::cout << "Error: not a positive number" << std::endl;
+		return;
 	}
-	return true;
-}
 
-void check_convert(std::string line) {
-	if (line != "date | value") {
-		if (!check_error(line))
-			return;
-		
+	float valueFloat = 0.0f;
+	std::istringstream(valueStr) >>valueFloat;
+	if (valueFloat > 1000) {
+		std::cout << "Error: too large a number." << std::endl;
+		return;
 	}
+
+	std::map<std::string, float>::iterator it = _data.upper_bound(dataLine);
+	if (it != _data.begin())
+		it--;
+	std::cout << dataLine << " => " << valueFloat << " = " << valueFloat * it->second << std::endl;
 }
 
 int Bitcoin::bitExchange(char* argv) {
@@ -129,6 +130,7 @@ int Bitcoin::bitExchange(char* argv) {
 	}
 
 	std::string line;
+	std::getline(input, line);
 	while (std::getline(input, line)) {
 		check_convert(line);
 	}

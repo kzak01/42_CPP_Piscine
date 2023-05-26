@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 12:58:30 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/26 12:22:54 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/26 12:45:12 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 # include <string>
 # include <sstream>
-# include <vector>
+# include <stack>
 # include <cstdlib>
 
 class RPN {

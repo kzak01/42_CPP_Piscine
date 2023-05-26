@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 09:27:01 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/26 11:47:57 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/26 13:03:50 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <fstream>
 # include <algorithm>
 # include <sstream>
+# include <cmath>
 
 class Bitcoin {
 	private:

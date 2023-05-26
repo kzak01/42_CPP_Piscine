@@ -1,0 +1,62 @@
+---------------------------------ENG-------------------------------
+						Polish notation
+
+Elimination of ambiguity: With Polish notation, the order of
+operations is uniquely determined by the position of the operators.
+There is no need to use parentheses to specify the precedence
+of operators. This reduces ambiguity and simplifies the reading
+and interpretation of expressions.
+
+Simplicity of processing: Polish notation allows mathematical
+operations to be performed using a stack-based approach.
+This simplifies the implementation of expression evaluation
+algorithms as there is no need to use a complex parser to analyze
+parentheses and determine operator precedence.
+
+Reduction of complexity: Polish notation eliminates the need for
+intermediate steps in evaluating expressions, such as resolving parentheses.
+This can simplify calculations and reduce computational complexity.
+
+Adaptability to computers: Polish notation was originally developed
+to simplify calculations within computers. Since computers perform
+operations using stacks and push/pop operations, Polish notation
+naturally fits the mode of computer processing.
+
+Efficiency of operations: Polish notation reduces the number of
+operations required to evaluate an expression, as operators are
+applied directly to their operands without evaluating nested expressions.
+This can improve the efficiency and performance of expression processing.
+
+
+---------------------------------ITA-------------------------------
+						Notazione Polacca
+
+Eliminazione delle ambiguità: Con la notazione polacca,
+l'ordine delle operazioni è determinato in modo univoco dalla
+posizione degli operatori. Non è necessario utilizzare le
+parentesi per specificare la precedenza degli operatori.
+Ciò riduce l'ambiguità e semplifica la lettura e l'interpretazione delle espressioni.
+
+Semplicità dell'elaborazione: La notazione polacca consente
+di eseguire operazioni matematiche utilizzando un approccio
+basato su uno stack. Ciò semplifica l'implementazione degli
+algoritmi di valutazione delle espressioni, in quanto non è
+necessario utilizzare un parser complesso per analizzare le
+parentesi e determinare la precedenza degli operatori.
+
+Riduzione della complessità: La notazione polacca elimina la
+necessità di eseguire passaggi intermedi per valutare le espressioni,
+come la risoluzione delle parentesi. Ciò può semplificare i
+calcoli e ridurre la complessità computazionale.
+
+Adattabilità ai computer: La notazione polacca è stata
+originariamente sviluppata per semplificare i calcoli all'interno
+dei computer. Poiché i computer eseguono le operazioni
+utilizzando stack e operazioni di push/pop, la notazione
+polacca si adatta naturalmente alla modalità di elaborazione dei computer.
+
+Efficienza delle operazioni: La notazione polacca riduce
+il numero di operazioni necessarie per valutare un'espressione,
+in quanto gli operatori vengono applicati direttamente ai
+loro operandi senza dover valutare espressioni nidificate.
+Ciò può migliorare l'efficienza e le prestazioni dell'elaborazione delle espressioni.

@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 09:26:59 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/26 11:56:38 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/26 13:07:27 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,13 +77,13 @@ void Bitcoin::check_convert(std::string line) {
 		return;
 	}
 
-	// Convert the value to float
+	// Check the value format
 	if (!check_value(valueStr)) {
 		std::cout << "Error: not a positive number" << std::endl;
 		return;
 	}
 
-	// convert value to float
+	// Convert the value to float
 	float valueFloat = 0.0f;
 	std::istringstream(valueStr) >> valueFloat;
 	if (valueFloat > 1000) {

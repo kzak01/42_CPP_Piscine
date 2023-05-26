@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 09:27:01 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/25 11:28:56 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/26 11:47:57 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@
 # include <algorithm>
 # include <sstream>
 
-#include <string_view>
-#include <stdexcept>
-
 class Bitcoin {
 	private:
 		std::map<std::string, float> _data;
 
-		void check_convert(std::string line);
+		void	check_convert(std::string line);
+		bool	check_data(std::string data);
+		bool	check_time(std::string data);
+		bool	check_value(std::string value);
 
 	public:
 		Bitcoin();
@@ -35,7 +35,7 @@ class Bitcoin {
 		Bitcoin& operator=( const Bitcoin& other );
 		~Bitcoin();
 
-		int bitExchange( char* argv );
+		int	bitExchange( char* argv );
 };
 
 #endif

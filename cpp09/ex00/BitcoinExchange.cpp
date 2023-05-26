@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 09:26:59 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/25 12:52:52 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/26 11:56:38 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,65 @@ Bitcoin& Bitcoin::operator=(const Bitcoin& other) {
 
 Bitcoin::~Bitcoin() {}
 
-bool	check_data(std::string data) {
+// -------------------------------BitcoinExchange---------------------------------------------
+
+int Bitcoin::bitExchange(char* argv) {
+	// Open the input.txt file
+	std::ifstream input(argv);
+	if (!input.good()) {
+		std::cerr << "\033[0;31mError: could not open file.\033[0m" << std::endl;
+		return 1;
+	}
+
+	// Iterate through each line in the file
+	std::string line;
+	std::getline(input, line);
+	while (std::getline(input, line)) {
+		check_convert(line);
+	}
+	input.close();
+	return 0;
+}
+
+void Bitcoin::check_convert(std::string line) {
+	// Check if the line has the format "y-m-d |"
+	if (!check_data(line)) {
+		std::cout << "Error: bad input => " << line << std::endl;
+		return;
+	}
+
+	std::string dataLine = line.substr(0, 10);
+	std::string valueStr = line.substr(13, line.size() - 13);
+
+	// Check the date format
+	if (!check_time(dataLine)) {
+		std::cout << "Error: bad input => " << line << std::endl;
+		return;
+	}
+
+	// Convert the value to float
+	if (!check_value(valueStr)) {
+		std::cout << "Error: not a positive number" << std::endl;
+		return;
+	}
+
+	// convert value to float
+	float valueFloat = 0.0f;
+	std::istringstream(valueStr) >> valueFloat;
+	if (valueFloat > 1000) {
+		std::cout << "Error: too large a number." << std::endl;
+		return;
+	}
+
+	// Search the data in the map[key] and return map[]value
+	std::map<std::string, float>::iterator it = _data.upper_bound(dataLine);
+	if (it != _data.begin())
+		it--;
+	std::cout << dataLine << " => " << valueFloat << " = " << valueFloat * it->second << std::endl;
+}
+
+// Must be in the format "0000-00-00 | "
+bool	Bitcoin::check_data(std::string data) {
 	if (data.size() < 13) {
 		return false;
 	}
@@ -58,7 +116,8 @@ bool	check_data(std::string data) {
 	return true;
 }
 
-bool check_time(std::string data) {
+// Check for a valid year-month-day format
+bool Bitcoin::check_time(std::string data) {
 	std::string year = data.substr(0, 4);
 	std::string month = data.substr(5, 2);
 	std::string day = data.substr(8, 2);
@@ -77,7 +136,8 @@ bool check_time(std::string data) {
 	return true;
 }
 
-bool	check_value(std::string value) {
+// Check if the value is a valid positive and only digit number
+bool	Bitcoin::check_value(std::string value) {
 	int dot = 0;
 
 	for (int i = 0; i < value.size(); i++) {
@@ -89,51 +149,4 @@ bool	check_value(std::string value) {
 			return false;
 	}
 	return true;
-}
-
-void Bitcoin::check_convert(std::string line) {
-	if (!check_data(line)) {
-		std::cout << "Error: bad input => " << line << std::endl;
-		return;
-	}
-
-	std::string dataLine = line.substr(0, 10);
-	std::string valueStr = line.substr(13, line.size() - 13);
-
-	if (!check_time(dataLine)) {
-		std::cout << "Error: bad input => " << line << std::endl;
-		return;
-	}
-	if (!check_value(valueStr)) {
-		std::cout << "Error: not a positive number" << std::endl;
-		return;
-	}
-
-	float valueFloat = 0.0f;
-	std::istringstream(valueStr) >>valueFloat;
-	if (valueFloat > 1000) {
-		std::cout << "Error: too large a number." << std::endl;
-		return;
-	}
-
-	std::map<std::string, float>::iterator it = _data.upper_bound(dataLine);
-	if (it != _data.begin())
-		it--;
-	std::cout << dataLine << " => " << valueFloat << " = " << valueFloat * it->second << std::endl;
-}
-
-int Bitcoin::bitExchange(char* argv) {
-	std::ifstream input(argv);
-	if (!input.good()) {
-		std::cerr << "\033[0;31mError: could not open file.\033[0m" << std::endl;
-		return 1;
-	}
-
-	std::string line;
-	std::getline(input, line);
-	while (std::getline(input, line)) {
-		check_convert(line);
-	}
-	input.close();
-	return 0;
 }

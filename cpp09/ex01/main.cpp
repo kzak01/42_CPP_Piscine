@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 12:58:25 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/25 13:06:37 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/26 12:35:12 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,19 @@
 
 int main(int argc, char** argv) {
 	if (argc != 2) {
-		std::cout << "\033[0;31mError: ./RPN + Polish mathematical expression\033[0m" << std::endl;
+		std::cerr << "\033[0;31mError: ./RPN + Polish mathematical expression\033[0m" << std::endl;
 		return 1;
 	}
-	RPN rpn;
-	return rpn.calc(argv[1]);
+
+	std::string expression = argv[1];
+
+	try {
+		RPN calculator;
+		int result = calculator.calc(expression);
+		std::cout << result << std::endl;
+	} catch (const std::exception& e) {
+		std::cerr << "\033[0;31mError: " << e.what() << "\033[0m" << std::endl;
+		return 1;
+	}
+	return 0;
 }

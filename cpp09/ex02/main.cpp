@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 13:13:44 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/27 18:56:14 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/28 11:04:01 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ int main(int argc, char** argv) {
 	// Sort using the first container (vector)
 	std::vector<int> vec(inputSequenze.begin(), inputSequenze.end());
 	clock_t startTime1 = clock();
-	quickSortVector(vec, 0, vec.size() - 1);
+	mergeSortVector(vec);
+	// quickSortVector(vec, 0, vec.size() - 1);
 	clock_t endTime1 = clock();
 
 	std::cout << "After: ";
@@ -65,7 +66,8 @@ int main(int argc, char** argv) {
 	// Sort using the second container (list)
 	std::list<int> lis(inputSequenze.begin(), inputSequenze.end());
 	clock_t startTime2 = clock();
-	quickSortList(lis, 0, lis.size() - 1);
+	mergeSortList(lis);
+	// quickSortList(lis, 0, lis.size() - 1);
 	clock_t endTime2 = clock();
 
 	// Print the time taken to process the range using std::list

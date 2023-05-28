@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 13:16:54 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/27 18:44:26 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/28 11:00:23 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@
 # include <ctime>
 # include <cstdlib>
 
-int partitionVector(std::vector<int>& vec, int start, int end);
-void quickSortVector(std::vector<int>& vec, int start, int end);
+void mergeSortVector(std::vector<int>& vec);
+void mergeSortList(std::list<int>& lis);
 
-int partitionList(std::list<int>& lis, int start, int end);
+void quickSortVector(std::vector<int>& vec, int start, int end);
 void quickSortList(std::list<int>& lis, int start, int end);
 
 #endif // PMERGEME_HPP

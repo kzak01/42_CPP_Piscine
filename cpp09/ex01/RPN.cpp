@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 12:58:27 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/26 13:16:43 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/28 10:31:54 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,13 @@ int RPN::calc(const std::string& expression) {
 				stack.push(a / b);
 			}
 		} else { // Convert token to an integer and push the number onto the stack
-			for (int i = 0; token[i]; i++) {
-				if (!isdigit(token[i]))
+			int i = 0;
+			if (token[i] == '-')
+				i++;
+			while (token[i]) {
+				if (!isdigit(token[i]) && token[0] != '-')
 					throw std::runtime_error("Only digit");
+				i++;
 			}
 			int num = std::atoi(token.c_str());
 			// Check if number are less than 10

@@ -1,3 +1,7 @@
+I misunderstood the subject. I thought I could use any sorting algorithm,
+so I chose quicksort. Then I reread it and realized it was asking
+for merge-insertion sort...
+
 ---------------------------------ENG-------------------------------
 								QuickSort
 
@@ -56,6 +60,7 @@ reach O(n^2) if the chosen pivot does not balance the list
 properly. Therefore, the correct implementation of the
 partitioning is crucial to ensure optimal performance of
 the quicksort.
+
 ---------------------------------ITA-------------------------------
 								QuickSort
 
@@ -114,3 +119,90 @@ Tuttavia, la sua complessità peggiore può arrivare a O(n^2)
 se il pivot scelto non bilancia correttamente la lista. Pertanto,
 l'implementazione corretta del partizionamento è fondamentale per
 garantire le prestazioni ottimali del quicksort.
+
+---------------------------------ENG-------------------------------
+						MergeInsertionSort
+
+The merge-insertion sort is a hybrid sorting algorithm
+that combines the merge sort and insertion sort.
+The main idea is to use the merge sort to divide the list
+into smaller subsets and apply the insertion sort on
+subsets with a size smaller than a specified threshold.
+This approach leverages the speed of merge sort to handle
+the majority of the sorting work, while the insertion
+sort is used to optimize the sorting of smaller subsets.
+
+Example:
+Let's consider the following list of numbers to be sorted:
+[7, 2, 1, 6, 8, 5, 3, 4]. We will use the merge-insertion
+sort to sort them in ascending order.
+
+Step 1: Divide the list into smaller subsets using the merge sort.
+We divide the list into two subsets: [7, 2, 1, 6] and [8, 5, 3, 4].
+
+Step 2: Apply the insertion sort on subsets with a size
+smaller than the specified threshold.
+We apply the insertion sort to the first subset [7, 2, 1, 6].
+After sorting, the first subset becomes [1, 2, 6, 7].
+
+Step 3: Merge the sorted subsets using the merge sort.
+We merge the sorted subsets [1, 2, 6, 7] and [8, 5, 3, 4]
+using the merge sort.
+After the merge, we obtain the partially sorted list
+[1, 2, 6, 7, 3, 4, 5, 8].
+
+Step 4: Apply the insertion sort to the partially sorted list.
+We apply the insertion sort to the partially sorted list
+[1, 2, 6, 7, 3, 4, 5, 8].
+After sorting, we obtain the completely sorted list
+[1, 2, 3, 4, 5, 6, 7, 8].
+
+The merge-insertion sort utilizes the efficiency of
+merge sort for the majority of the sorting work,
+while the insertion sort is used to optimize smaller subsets.
+This approach can be particularly useful when the
+list contains a combination of large and small subsets.
+
+---------------------------------ITA-------------------------------
+						MergeInsertionSort
+
+Il merge-insertion sort è un algoritmo di ordinamento ibrido
+che combina il merge sort e l'insertion sort. L'idea principale
+è utilizzare il merge sort per suddividere la lista in sottoinsiemi
+più piccoli e applicare l'insertion sort sui sottoinsiemi di
+dimensione inferiore a una soglia specificata. Questo approccio
+sfrutta la velocità di merge sort per gestire la maggior parte
+del lavoro di ordinamento, mentre l'insertion sort viene utilizzato
+per ottimizzare l'ordinamento dei sottoinsiemi più piccoli.
+
+Esempio:
+Supponiamo di avere la seguente lista di numeri da ordinare:
+[7, 2, 1, 6, 8, 5, 3, 4]. Utilizzeremo il merge-insertion
+sort per ordinarli in ordine crescente.
+
+Passo 1: Dividiamo la lista in sottoinsiemi più piccoli
+utilizzando il merge sort.
+Suddividiamo la lista in due sottoinsiemi: [7, 2, 1, 6] e [8, 5, 3, 4].
+
+Passo 2: Applichiamo l'insertion sort sui sottoinsiemi
+di dimensione inferiore alla soglia specificata.
+Applichiamo l'insertion sort al primo sottoinsieme [7, 2, 1, 6].
+Dopo l'ordinamento, il primo sottoinsieme diventa [1, 2, 6, 7].
+
+Passo 3: Riuniamo i sottoinsiemi ordinati utilizzando il merge sort.
+Fondiamo i sottoinsiemi ordinati [1, 2, 6, 7] e [8, 5, 3, 4]
+utilizzando il merge sort.
+Dopo il merge, otteniamo la lista parzialmente ordinata
+[1, 2, 6, 7, 3, 4, 5, 8].
+
+Passo 4: Applichiamo l'insertion sort alla lista parzialmente ordinata.
+Applichiamo l'insertion sort alla lista parzialmente ordinata
+[1, 2, 6, 7, 3, 4, 5, 8].
+Dopo l'ordinamento, otteniamo la lista completamente ordinata
+[1, 2, 3, 4, 5, 6, 7, 8].
+
+Il merge-insertion sort sfrutta l'efficienza del merge sort
+per la maggior parte dell'ordinamento, mentre l'insertion sort
+viene utilizzato per ottimizzare i sottoinsiemi più piccoli.
+Questo approccio può essere particolarmente utile quando la
+lista contiene una combinazione di grandi e piccoli sottoinsiemi.

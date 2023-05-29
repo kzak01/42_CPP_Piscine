@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 12:58:27 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/28 10:31:54 by kzak             ###   ########.fr       */
+/*   Updated: 2023/05/29 10:11:47 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,13 @@
 
 RPN::RPN() {}
 
-RPN::RPN(const RPN& other) {}
+RPN::RPN(const RPN& other) {
+	return;
+}
 
-RPN& RPN::operator=(const RPN& other) {}
+RPN& RPN::operator=(const RPN& other) {
+	return *this;
+}
 
 RPN::~RPN() {}
 

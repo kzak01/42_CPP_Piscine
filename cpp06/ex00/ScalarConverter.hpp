@@ -6,7 +6,7 @@
 /*   By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:20:39 by kzak              #+#    #+#             */
-/*   Updated: 2023/05/10 14:41:03 by kzak             ###   ########.fr       */
+/*   Updated: 2023/06/01 15:43:44 by kzak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ extern std::string special[6];
 
 class ScalarConverter {
 	private:
-		static void char_converter(const std::string& input);
-		static void number_converter(const std::string& input);
+		static void char_converter( const std::string& input );
+		static void number_converter( const std::string& input );
 
 	public:
 		ScalarConverter();

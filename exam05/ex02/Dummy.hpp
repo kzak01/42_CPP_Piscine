@@ -2,7 +2,6 @@
 # define DUMMMY_HPP
 
 # include "ATarget.hpp"
-# include "ASpell.hpp"
 
 class Dummy : public ATarget {
 	public:

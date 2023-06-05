@@ -2,7 +2,6 @@
 # define FIREBALL_HPP
 
 # include "ASpell.hpp"
-# include "ATarget.hpp"
 
 class Fireball : public ASpell {
 	public:

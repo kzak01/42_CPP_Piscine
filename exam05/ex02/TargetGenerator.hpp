@@ -2,7 +2,6 @@
 # define TARGETGENERATOR_HPP
 
 # include <iostream>
-# include <string>
 # include <vector>
 # include "ATarget.hpp"
 

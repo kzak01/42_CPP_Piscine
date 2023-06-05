@@ -2,12 +2,9 @@
 # define WARLOCK_HPP
 
 # include <iostream>
-# include <string>
 # include <vector>
 # include "ASpell.hpp"
 # include "ATarget.hpp"
-
-class ASpell;
 
 class Warlock {
 	private:

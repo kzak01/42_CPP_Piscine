@@ -2,7 +2,6 @@
 # define POLYMORPH_HPP
 
 # include "ASpell.hpp"
-# include "ATarget.hpp"
 
 class Polymorph : public ASpell {
 	public:

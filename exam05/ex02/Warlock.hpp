@@ -2,7 +2,6 @@
 # define WARLOCK_HPP
 
 # include <iostream>
-# include <string>
 # include <vector>
 # include "SpellBook.hpp"
 # include "ATarget.hpp"
@@ -22,6 +21,7 @@ class Warlock {
 		~Warlock() {
 			std::cout << name << ": My job here is done!" << std::endl;
 		}
+
 		const std::string& getName() const {return name;}
 		const std::string& getTitle() const {return title;}
 		void setTitle(const std::string& title) {this->title = title;}
@@ -29,7 +29,6 @@ class Warlock {
 		void introduce() const {
 			std::cout << name << ": I am " << name << ", " << title << "!!" << std::endl;
 		}
-
 		void learnSpell(ASpell* spell) {spellBook.learnSpell(spell);}
 		void forgetSpell(const std::string& spellName) {spellBook.forgetSpell(spellName);}
 		void launchSpell(const std::string& spellName, const ATarget& target) {

@@ -3,28 +3,26 @@
 # define WARLOCK_HPP
 
 # include <iostream>
-# include <string>
-
-using namespace std;
 
 class Warlock {
 	private:
-		string name;
-		string title;
+		std::string name;
+		std::string title;
+
 	public:
-		Warlock(const string& name, const string& title) : name(name), title(title) {
-			cout << name << ": This look .." << endl;
+		Warlock(const std::string& name, const std::string& title) : name(name), title(title) {
+			std::cout << name << ": This look .." << std::endl;
 		}
 		Warlock(const Warlock&) = delete;
 		Warlock& operator=(const Warlock&) = delete;
-		~Warlock() {cout << name << ": My job .." << endl;}
+		~Warlock() {std::cout << name << ": My job .." << std::endl;}
 
-		const string& getName() const {return name;}
-		const string& getTitle() const {return title;}
-		void setTitle(const string& title) {this->title = title;}
+		const std::string& getName() const {return name;}
+		const std::string& getTitle() const {return title;}
+		void setTitle(const std::string& title) {this->title = title;}
 
 		void introduce() const {
-			cout << name << "I am" << name << ", " << title << "!" << endl;
+			std::cout << name << ": I am" << name << ", " << title << "!" << std::endl;
 		}
 };
 

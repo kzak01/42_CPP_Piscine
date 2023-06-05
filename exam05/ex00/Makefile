@@ -6,14 +6,14 @@
 #    By: kzak <kzak@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/14 20:05:45 by kzak              #+#    #+#              #
-#    Updated: 2023/05/29 15:39:54 by kzak             ###   ########.fr        #
+#    Updated: 2023/06/05 10:39:49 by kzak             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= Warlock
 CC		= c++
 CFLAG	= -std=c++98 -Wall -Wextra -Werror
-SRCS	= main.cpp Warlock.cpp
+SRCS	= main.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 all: $(NAME)

@@ -14,9 +14,8 @@ class TargetGenerator {
 		TargetGenerator(const TargetGenerator&) = delete;
 		TargetGenerator& operator=(const TargetGenerator&) = delete;
 		~TargetGenerator() {
-			for (ATarget* target : targetTypes) {
+			for (ATarget* target : targetTypes)
 				delete target;
-			}
 		}
 
 		void learnTargetType(ATarget* targetType) {targetTypes.push_back(targetType->clone());}

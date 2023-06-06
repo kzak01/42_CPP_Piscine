@@ -14,15 +14,14 @@ class Warlock {
 
 	public:
 		Warlock(const std::string& name, const std::string& title) : name(name), title(title) {
-			std::cout << name << ": This look..." << std::endl;
+			std::cout << name << ": This looks like another boring day." << std::endl;
 		}
 		Warlock(const Warlock&) = delete;
 		Warlock& operator=(const Warlock&) = delete;
 		~Warlock() {
-			std::cout << name << ": My job here.." << std::endl;
-			for (ASpell* spell : spells) {
+			std::cout << name << ": My job here is done!" << std::endl;
+			for (ASpell* spell : spells)
 				delete spell;
-			}
 		}
 
 		const std::string& getName() const {return name;}

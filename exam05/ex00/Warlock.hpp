@@ -14,7 +14,9 @@ class Warlock {
 		}
 		Warlock(const Warlock&) = delete;
 		Warlock& operator=(const Warlock&) = delete;
-		~Warlock() {std::cout << name << ": My job .." << std::endl;}
+		~Warlock() {
+			std::cout << name << ": My job .." << std::endl;
+		}
 
 		const std::string& getName() const {return name;}
 		const std::string& getTitle() const {return title;}

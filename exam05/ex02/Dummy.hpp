@@ -7,7 +7,7 @@ class Dummy : public ATarget {
 	public:
 		Dummy() : ATarget("Target Practice Dummy") {}
 
-		ATarget* clone() const override {return new Dummy(*this);}
+		Dummy* clone() const override {return new Dummy(*this);}
 		void getHitBySpell(const ASpell& spell) const override {
 			std::cout << getType() << " has been " << spell.getEffects() << "!" << std::endl;
 		}

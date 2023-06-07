@@ -8,9 +8,7 @@ class Polymorph : public ASpell {
 		Polymorph() : ASpell("Polymorph", "turned into a critter") {}
 
 		Polymorph* clone() const override {return new Polymorph(*this);}
-		void launch(const ATarget& target) const override {
-			std::cout << target.getType() << " has been " << getEffects() << "!" << std::endl;
-		}
+		void launch(const ATarget& target) const override {target.getHitBySpell(*this);}
 };
 
 #endif

@@ -2,6 +2,7 @@
 # define ATARGET_HPP
 
 # include <iostream>
+# include "ASpell.hpp"
 
 class ASpell;
 
@@ -13,10 +14,14 @@ class ATarget{
 		ATarget(const std::string& type) : type(type) {}
 		virtual ~ATarget() {}
 
+		ATarget();
+		ATarget(const ATarget &asd){*this = asd;}
+		ATarget & operator=(const ATarget &asd){this->type = asd.getType(); return *this;}
+
 		const std::string& getType() const {return type;}
 
 		virtual ATarget* clone() const = 0;
-		virtual void getHitBySpell(const ASpell& spell) const = 0;
+		virtual void getHitBySpell(const ASpell& spell) const;
 };
 
 #endif

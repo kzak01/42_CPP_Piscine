@@ -13,7 +13,7 @@
 NAME	= Warlock
 CC		= c++
 CFLAG	= -std=c++98 -Wall -Wextra -Werror
-SRCS	= main.cpp
+SRCS	= main.cpp ASpell.cpp ATarget.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 all: $(NAME)

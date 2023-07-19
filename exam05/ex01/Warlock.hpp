@@ -11,13 +11,14 @@ class Warlock {
 		std::string name;
 		std::string title;
 		std::vector<ASpell*> spells;
+		Warlock();
+		Warlock(const Warlock&);
+		Warlock& operator=(const Warlock&);
 
 	public:
 		Warlock(const std::string& name, const std::string& title) : name(name), title(title) {
 			std::cout << name << ": This looks like another boring day." << std::endl;
 		}
-		Warlock(const Warlock&) = delete;
-		Warlock& operator=(const Warlock&) = delete;
 		~Warlock() {
 			std::cout << name << ": My job here is done!" << std::endl;
 			for (ASpell* spell : spells)
@@ -31,9 +32,12 @@ class Warlock {
 		void introduce() const {
 			std::cout << name << ": I am " << name << ", " << title << "!" << std::endl;
 		}
-		void learnSpell(ASpell* spell) {spells.push_back(spell);}
+		void learnSpell(ASpell* spell) {
+			if (spell)
+				spells.push_back(spell);
+		}
 		void forgetSpell(const std::string& spellName) {
-			for (auto it = spells.begin(); it != spells.end(); ++it) {
+			for (std::vector<ASpell*>::iterator it = spells.begin(); it != spells.end(); ++it) {
 				if ((*it)->getName() == spellName) {
 					delete *it;
 					spells.erase(it);

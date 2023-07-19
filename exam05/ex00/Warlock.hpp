@@ -7,13 +7,14 @@ class Warlock {
 	private:
 		std::string name;
 		std::string title;
+		Warlock();
+		Warlock(const Warlock&);
+		Warlock& operator=(const Warlock&);
 
 	public:
 		Warlock(const std::string& name, const std::string& title) : name(name), title(title) {
 			std::cout << name << ": This look .." << std::endl;
 		}
-		Warlock(const Warlock&) = delete;
-		Warlock& operator=(const Warlock&) = delete;
 		~Warlock() {
 			std::cout << name << ": My job .." << std::endl;
 		}

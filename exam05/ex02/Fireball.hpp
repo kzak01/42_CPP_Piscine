@@ -8,9 +8,6 @@ class Fireball : public ASpell {
 		Fireball() : ASpell("Fireball", "burnt to a crisp") {}
 
 		Fireball* clone() const override {return new Fireball(*this);}
-		void launch(const ATarget& target) const override {
-			std::cout << target.getType() << " has been " << getEffects() << "!" << std::endl;
-		}
 };
 
 #endif

@@ -2,7 +2,7 @@
 # define WARLOCK_HPP
 
 # include <iostream>
-# include <vector>
+# include "ASpell.hpp"
 # include "SpellBook.hpp"
 # include "ATarget.hpp"
 
@@ -12,12 +12,14 @@ class Warlock {
 		std::string title;
 		SpellBook spellBook;
 
+		Warlock();
+		Warlock(const Warlock&);
+		Warlock& operator=(const Warlock&);
+
 	public:
 		Warlock(const std::string& name, const std::string& title) : name(name), title(title) {
 			std::cout << name << ": This looks like another boring day." << std::endl;
 		}
-		Warlock(const Warlock&) = delete;
-		Warlock& operator=(const Warlock&) = delete;
 		~Warlock() {
 			std::cout << name << ": My job here is done!" << std::endl;
 		}

@@ -29,7 +29,7 @@ class Warlock {
 		void setTitle(const std::string& title) {this->title = title;}
 
 		void introduce() const {
-			std::cout << name << ": I am " << name << ", " << title << "!!" << std::endl;
+			std::cout << name << ": I am " << name << ", " << title << "!" << std::endl;
 		}
 		void learnSpell(ASpell* spell) {spellBook.learnSpell(spell);}
 		void forgetSpell(const std::string& spellName) {spellBook.forgetSpell(spellName);}

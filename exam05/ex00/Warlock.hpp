@@ -24,7 +24,7 @@ class Warlock {
 		void setTitle(const std::string& title) {this->title = title;}
 
 		void introduce() const {
-			std::cout << name << ": I am" << name << ", " << title << "!" << std::endl;
+			std::cout << name << ": I am " << name << ", " << title << "!" << std::endl;
 		}
 };
 

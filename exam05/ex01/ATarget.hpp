@@ -21,7 +21,7 @@ class ATarget {
 		const std::string& getType() const {return type;}
 
 		virtual ATarget* clone() const = 0;
-		virtual void getHitBySpell(const ASpell& spell) const;
+		void getHitBySpell(const ASpell& spell) const;
 };
 
 #endif

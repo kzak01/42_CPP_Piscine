@@ -12,7 +12,6 @@ class ASpell {
 		std::string effects;
 
 	public:
-
 		ASpell(const std::string& name, const std::string& effects) : name(name), effects(effects) {}
 		virtual ~ASpell() {}
 
@@ -24,7 +23,7 @@ class ASpell {
 		const std::string& getEffects() const {return effects;}
 
 		virtual ASpell* clone() const = 0;
-		virtual void launch(const ATarget& target) const;
+		void launch(const ATarget& target) const;
 };
 
 #endif

@@ -23,7 +23,7 @@ class ASpell {
 		const std::string& getEffects() const {return effects;}
 
 		virtual ASpell* clone() const = 0;
-		virtual void launch(const ATarget& target) const;
+		void launch(const ATarget& target) const;
 };
 
 #endif

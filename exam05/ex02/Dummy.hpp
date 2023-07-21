@@ -7,7 +7,7 @@ class Dummy : public ATarget {
 	public:
 		Dummy() : ATarget("Target Practice Dummy") {}
 
-		Dummy* clone() const override {return new Dummy(*this);}
+		ATarget* clone() const {return new Dummy();}
 };
 
 #endif

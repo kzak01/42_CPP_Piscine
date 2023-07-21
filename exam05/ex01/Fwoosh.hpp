@@ -7,7 +7,7 @@ class Fwoosh : public ASpell {
 	public:
 		Fwoosh() : ASpell("Fwoosh", "fwooshed") {}
 
-		Fwoosh* clone() const override {return new Fwoosh(*this);}
+		ASpell* clone() const {return new Fwoosh();}
 };
 
 #endif

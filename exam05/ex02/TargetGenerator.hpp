@@ -2,43 +2,33 @@
 # define TARGETGENERATOR_HPP
 
 # include <iostream>
-# include <vector>
+# include <map>
 # include "ATarget.hpp"
 
 class TargetGenerator {
 	private:
-		std::vector<ATarget*> targetTypes;
+		std::map<std::string, ATarget*> targetTypes;
 
 		TargetGenerator(const TargetGenerator&);
 		TargetGenerator& operator=(const TargetGenerator&);
 
 	public:
 		TargetGenerator() {}
-		~TargetGenerator() {
-			for (ATarget* target : targetTypes)
-				delete target;
-		}
+		~TargetGenerator() {}
 
 		void learnTargetType(ATarget* targetType) {
 			if (targetType)
-				targetTypes.push_back(targetType->clone());
+				targetTypes[targetType->getType()] = targetType;
 		}
 		void forgetTargetType(const std::string& targetType) {
-			for (std::vector<ATarget*>::iterator it = targetTypes.begin(); it != targetTypes.end(); ++it) {
-				if ((*it)->getType() == targetType) {
-					delete *it;
-					targetTypes.erase(it);
-					break;
-				}
-			}
+			if (targetTypes.find(targetType) != targetTypes.end())
+				targetTypes.erase(targetTypes.find(targetType));
 		}
-		ATarget* createTarget(const std::string& targetType) const {
-			for (ATarget* target : targetTypes) {
-				if (target->getType() == targetType) {
-					return target->clone(); //qui
-				}
-			}
-			return nullptr;
+		ATarget* createTarget(const std::string& targetType) {
+			ATarget* target = NULL;
+			if (targetTypes.find(targetType) != targetTypes.end())
+				target = targetTypes[targetType];
+			return target;
 		}
 };
 

@@ -7,7 +7,7 @@ class BrickWall : public ATarget {
 	public:
 		BrickWall() : ATarget("Inconspicuous Red-brick Wall") {}
 
-		BrickWall* clone() const override {return new BrickWall(*this);}
+		ATarget* clone() const {return new BrickWall();}
 };
 
 #endif

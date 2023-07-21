@@ -2,7 +2,7 @@
 # define WARLOCK_HPP
 
 # include <iostream>
-# include <vector>
+# include <map>
 # include "ASpell.hpp"
 # include "ATarget.hpp"
 
@@ -10,7 +10,8 @@ class Warlock {
 	private:
 		std::string name;
 		std::string title;
-		std::vector<ASpell*> spells;
+		std::map<std::string, ASpell*> spells;
+
 		Warlock();
 		Warlock(const Warlock&);
 		Warlock& operator=(const Warlock&);
@@ -21,8 +22,6 @@ class Warlock {
 		}
 		~Warlock() {
 			std::cout << name << ": My job here is done!" << std::endl;
-			for (ASpell* spell : spells)
-				delete spell;
 		}
 
 		const std::string& getName() const {return name;}
@@ -34,24 +33,16 @@ class Warlock {
 		}
 		void learnSpell(ASpell* spell) {
 			if (spell)
-				spells.push_back(spell);
+				spells[spell->getName()] = spell;
 		}
 		void forgetSpell(const std::string& spellName) {
-			for (std::vector<ASpell*>::iterator it = spells.begin(); it != spells.end(); ++it) {
-				if ((*it)->getName() == spellName) {
-					delete *it;
-					spells.erase(it);
-					break;
-				}
+			if (spells.find(spellName) != spells.end()) {
+				spells.erase(spells.find(spellName));
 			}
 		}
 		void launchSpell(const std::string& spellName, const ATarget& target) {
-			for (ASpell* spell : spells) {
-				if (spell->getName() == spellName) {
-					spell->launch(target);
-					break;
-				}
-			}
+			if (spells.find(spellName) != spells.end())
+				spells[spellName]->launch(target);
 		}
 };
 

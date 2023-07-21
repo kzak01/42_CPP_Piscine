@@ -2,43 +2,33 @@
 # define SPELLBOOK_HPP
 
 # include <iostream>
-# include <vector>
+# include <map>
 # include "ASpell.hpp"
 
 class SpellBook {
 	private:
-		std::vector<ASpell*> spells;
+		std::map<std::string, ASpell*> spells;
 
 		SpellBook(const SpellBook&);
 		SpellBook& operator=(const SpellBook&);
 
 	public:
 		SpellBook() {}
-		~SpellBook() {
-			for (ASpell* spell : spells)
-				delete spell;
-		}
+		~SpellBook() {}
 
 		void learnSpell(ASpell* spell) {
 			if (spell)
-				spells.push_back(spell->clone());
+				spells[spell->getName()] = spell;
 		}
 		void forgetSpell(const std::string& spellName) {
-			for (std::vector<ASpell*>::iterator it = spells.begin(); it != spells.end(); it++) {
-				if ((*it)->getName() == spellName) {
-					delete *it;
-					spells.erase(it);
-					break;
-				}
-			}
+			if (spells.find(spellName) != spells.end())
+				spells.erase(spells.find(spellName));
 		}
-		ASpell* createSpell(const std::string& spellName) const {
-			for (ASpell* spell : spells) {
-				if (spell->getName() == spellName) {
-					return spell->clone(); //qui
-				}
-			}
-			return nullptr;
+		ASpell* createSpell(const std::string& spellName) {
+			ASpell* spell = NULL;
+			if (spells.find(spellName) != spells.end())
+				spell = spells[spellName];
+			return spell;
 		}
 };
 

@@ -7,7 +7,7 @@ class Polymorph : public ASpell {
 	public:
 		Polymorph() : ASpell("Polymorph", "turned into a critter") {}
 
-		Polymorph* clone() const override {return new Polymorph(*this);}
+		ASpell* clone() const {return new Polymorph();}
 };
 
 #endif

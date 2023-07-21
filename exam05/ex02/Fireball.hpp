@@ -7,7 +7,7 @@ class Fireball : public ASpell {
 	public:
 		Fireball() : ASpell("Fireball", "burnt to a crisp") {}
 
-		Fireball* clone() const override {return new Fireball(*this);}
+		ASpell* clone() const {return new Fireball();}
 };
 
 #endif

@@ -2,6 +2,7 @@
 # define WARLOCK_HPP
 
 # include <iostream>
+# include <map>
 # include "ASpell.hpp"
 # include "SpellBook.hpp"
 # include "ATarget.hpp"
@@ -34,11 +35,8 @@ class Warlock {
 		void learnSpell(ASpell* spell) {spellBook.learnSpell(spell);}
 		void forgetSpell(const std::string& spellName) {spellBook.forgetSpell(spellName);}
 		void launchSpell(const std::string& spellName, const ATarget& target) {
-			ASpell* spell = spellBook.createSpell(spellName);
-			if (spell != nullptr) {
-				spell->launch(target);
-				delete spell;
-			}
+			if (spellBook.createSpell(spellName))
+				spellBook.createSpell(spellName)->launch(target);
 		}
 };
 

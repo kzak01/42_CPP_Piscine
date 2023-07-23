@@ -14,7 +14,7 @@ class ATarget {
 		ATarget(const std::string& type) : type(type) {}
 		virtual ~ATarget() {}
 
-		ATarget();
+		ATarget() {}
 		ATarget(const ATarget& asd) {*this = asd;}
 		ATarget& operator=(const ATarget& asd) {this->type = asd.getType(); return *this;}
 
